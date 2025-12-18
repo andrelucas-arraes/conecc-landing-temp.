@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 export default function Hero() {
   const containerVariants = {
@@ -12,26 +12,26 @@ export default function Hero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
+        ease: [0.25, 0.1, 0.25, 1],
       },
     },
   };
 
-  const infoCardVariants = {
+  const infoCardVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.5,
-        ease: 'easeOut',
+        ease: [0.25, 0.1, 0.25, 1],
       },
     },
   };
@@ -46,7 +46,7 @@ export default function Hero() {
           backgroundAttachment: 'fixed',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#5D2126]/95 via-[#5D2126]/85 to-[#5D2126]/75"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-[#5D2126]/95 via-[#5D2126]/85 to-[#5D2126]/75"></div>
       </div>
 
       {/* Content */}

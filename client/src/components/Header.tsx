@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence,  } from 'framer-motion';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -76,7 +76,7 @@ export default function Header() {
           <img
             src="/images/logo.png"
             alt="CONECC Logo"
-            className="h-8 sm:h-10 w-auto"
+            className="h-8 sm:h-20 w-auto"
           />
         </motion.div>
 
