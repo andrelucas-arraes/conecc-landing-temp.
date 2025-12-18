@@ -52,7 +52,7 @@
   --color-terracotta: #8C5E60;
   --color-rose-old: #A67B7D;
 
-  --color-rose-nude: #D4B5B7;
+  --color-rose-nude: #C4A5A7;
   --color-rose-pale: #ECD5D7;
   --color-cream: #F9F4F5;
   
@@ -169,6 +169,35 @@
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
+  }
+
+  /* Skip link for accessibility */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #5D2126;
+    color: #F9F4F5;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 100;
+    border-radius: 0 0 4px 0;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 

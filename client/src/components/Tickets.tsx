@@ -11,6 +11,9 @@ interface TicketBatch {
   name: string;
   subtitle?: string;
   vacancies: string;
+  totalVacancies: number;
+  remainingVacancies?: number;
+  deadline?: string;
   categories: TicketCategory[];
   highlighted?: boolean;
 }
@@ -19,6 +22,9 @@ const ticketBatches: TicketBatch[] = [
   {
     name: 'LOTE PROMOCIONAL',
     vacancies: '50 VAGAS',
+    totalVacancies: 50,
+    remainingVacancies: 12,
+    deadline: '15/02/2026',
     categories: [
       { category: 'Estudantes', price: 'R$ 150,00' },
       { category: 'Profissionais de outras áreas', price: 'R$ 180,00' },
@@ -30,11 +36,15 @@ const ticketBatches: TicketBatch[] = [
     name: 'LOTE ESPECIAL',
     subtitle: 'PROGRAMAS ESTUDANTIS DO GOVERNO FEDERAL',
     vacancies: '15 VAGAS (FIES, FIES SOCIAL, PROUNI)',
+    totalVacancies: 15,
+    remainingVacancies: 3,
     categories: [{ category: 'Estudantes', price: 'R$ 100,00' }],
   },
   {
     name: '1º LOTE',
     vacancies: '50 VAGAS',
+    totalVacancies: 50,
+    remainingVacancies: 35,
     categories: [
       { category: 'Estudantes', price: 'R$ 250,00' },
       { category: 'Profissionais de outras áreas', price: 'R$ 280,00' },
@@ -44,6 +54,8 @@ const ticketBatches: TicketBatch[] = [
   {
     name: '2º LOTE',
     vacancies: '150 VAGAS',
+    totalVacancies: 150,
+    remainingVacancies: 150,
     categories: [
       { category: 'Estudantes', price: 'R$ 300,00' },
       { category: 'Profissionais de outras áreas', price: 'R$ 320,00' },
@@ -53,6 +65,8 @@ const ticketBatches: TicketBatch[] = [
   {
     name: '3º LOTE',
     vacancies: '150 VAGAS',
+    totalVacancies: 150,
+    remainingVacancies: 150,
     categories: [
       { category: 'Estudantes', price: 'R$ 350,00' },
       { category: 'Profissionais de outras áreas', price: 'R$ 380,00' },
@@ -62,6 +76,8 @@ const ticketBatches: TicketBatch[] = [
   {
     name: '4º LOTE',
     vacancies: '150 VAGAS',
+    totalVacancies: 150,
+    remainingVacancies: 150,
     categories: [
       { category: 'Estudantes', price: 'R$ 400,00' },
       { category: 'Profissionais de outras áreas', price: 'R$ 420,00' },
@@ -126,7 +142,7 @@ export default function Tickets() {
   };
 
   return (
-    <section id="ingressos" className="py-24 bg-[#F9F4F5]">
+    <section id="ingressos" className="py-24 bg-[#F9F4F5]" aria-labelledby="ingressos-heading">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -136,8 +152,8 @@ export default function Tickets() {
           viewport={{ once: true, amount: 0.3 }}
           variants={headerVariants}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#5D2126] mb-6">Ingressos e Preços</h2>
-          <div className="w-16 h-1 bg-[#BC989A] mb-8 mx-auto"></div>
+          <h2 id="ingressos-heading" className="text-4xl md:text-5xl font-bold text-[#5D2126] mb-6">Ingressos e Preços</h2>
+          <div className="w-16 h-1 bg-[#BC989A] mb-8 mx-auto" aria-hidden="true"></div>
           <p className="text-lg text-[#593234]">
             Escolha o plano que melhor se adequa ao seu perfil e garanta sua presença no I CONECC.
           </p>
@@ -159,11 +175,14 @@ export default function Tickets() {
               {/* Batch Header */}
               <motion.button
                 onClick={() => setExpandedBatch(expandedBatch === index ? null : index)}
-                className={`w-full text-left p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-between group ${batch.highlighted
+                className={`w-full text-left p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-between group focus-visible:outline-2 focus-visible:outline-[#5D2126] focus-visible:outline-offset-2 ${batch.highlighted
                     ? 'bg-gradient-to-r from-[#5D2126] to-[#7D4E50] text-[#F9F4F5]'
                     : 'bg-white'
                   }`}
                 whileHover={{ x: 5 }}
+                aria-expanded={expandedBatch === index}
+                aria-controls={`batch-${index}-content`}
+                aria-label={`${batch.name} - ${batch.vacancies}`}
               >
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-1">
@@ -193,6 +212,11 @@ export default function Tickets() {
                   >
                     {batch.vacancies}
                   </p>
+                  {batch.deadline && (
+                    <p className={`text-xs ${batch.highlighted ? 'text-[#BC989A]' : 'text-[#8C5E60]'} font-semibold`}>
+                      Encerra em {batch.deadline}
+                    </p>
+                  )}
                 </div>
                 <motion.div
                   animate={{ rotate: expandedBatch === index ? 180 : 0 }}
@@ -208,11 +232,14 @@ export default function Tickets() {
               <AnimatePresence>
                 {expandedBatch === index && (
                   <motion.div
+                    id={`batch-${index}-content`}
                     className="overflow-hidden bg-white"
                     initial="hidden"
                     animate="visible"
                     exit="exit"
                     variants={categoriesVariants}
+                    role="region"
+                    aria-labelledby={`batch-${index}-header`}
                   >
                     <div className="p-6 space-y-4">
                       {batch.categories.map((cat, catIdx) => (
@@ -232,11 +259,12 @@ export default function Tickets() {
 
                       {/* CTA Button */}
                       <motion.button
-                        className="w-full mt-4 py-3 px-4 bg-[#5D2126] text-[#F9F4F5] font-bold rounded-lg transition-all duration-300 hover:bg-[#7D4E50]"
+                        className="w-full mt-4 py-3 px-4 bg-[#5D2126] text-[#F9F4F5] font-bold rounded-lg transition-all duration-300 hover:bg-[#7D4E50] focus-visible:outline-2 focus-visible:outline-[#BC989A] focus-visible:outline-offset-2"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
+                        aria-label={`Inscrever-se no ${batch.name}`}
                       >
-                        Inscrever-se
+                        {batch.highlighted ? 'Garantir Minha Vaga - Economize até R$ 50' : 'Inscrever-se'}
                       </motion.button>
                     </div>
                   </motion.div>

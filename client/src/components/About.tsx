@@ -59,7 +59,7 @@ export default function About() {
   };
 
   return (
-    <section id="sobre" className="py-24 bg-[#F9F4F5]">
+    <section id="sobre" className="py-24 bg-[#F9F4F5]" aria-labelledby="sobre-heading">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -69,10 +69,10 @@ export default function About() {
           viewport={{ once: true, amount: 0.3 }}
           variants={headerVariants}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#5D2126] mb-6">
+          <h2 id="sobre-heading" className="text-4xl md:text-5xl font-bold text-[#5D2126] mb-6">
             Sobre o Evento
           </h2>
-          <div className="w-16 h-1 bg-[#BC989A] mb-8 mx-auto"></div>
+          <div className="w-16 h-1 bg-[#BC989A] mb-8 mx-auto" aria-hidden="true"></div>
           <p className="text-lg text-[#593234] leading-relaxed mb-6">
             O CONECC – I Congresso de Especialidades Clínicas e Cirúrgicas surge como uma iniciativa inovadora que visa integrar múltiplas áreas da medicina, promovendo atualização científica, troca de experiências e construção de networking qualificado entre profissionais e estudantes da saúde.
           </p>

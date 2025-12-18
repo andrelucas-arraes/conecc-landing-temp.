@@ -126,9 +126,10 @@ export default function Hero() {
             whileHover={{ scale: 1.08, y: -2 }}
             whileTap={{ scale: 0.98 }}
             href="#ingressos"
-            className="inline-block px-8 py-4 bg-[#BC989A] text-[#5D2126] font-bold text-lg rounded-lg transition-all duration-300 hover:bg-[#D4B5B7] hover:shadow-2xl"
+            className="inline-block px-8 py-4 bg-[#BC989A] text-[#5D2126] font-bold text-lg rounded-lg transition-all duration-300 hover:bg-[#D4B5B7] hover:shadow-2xl focus-visible:outline-2 focus-visible:outline-[#BC989A] focus-visible:outline-offset-2"
+            aria-label="Garantir minha vaga no CONECC 2026"
           >
-            Garantir Minha Vaga
+            Garantir Minha Vaga - Economize até R$ 50
           </motion.a>
         </motion.div>
       </div>
@@ -139,7 +140,50 @@ export default function Hero() {
         style={{
           clipPath: 'polygon(0 8%, 100% 0, 100% 100%, 0 100%)',
         }}
+        aria-hidden="true"
       ></div>
+      
+      {/* Schema.org Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Event',
+            name: 'CONECC - I Congresso de Especialidades Clínicas e Cirúrgicas',
+            description: 'Multiespecialidades e o Futuro da Medicina: Ciência, Prática e Inovação',
+            startDate: '2026-03-19',
+            endDate: '2026-03-29',
+            eventStatus: 'https://schema.org/EventScheduled',
+            eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+            location: {
+              '@type': 'Place',
+              name: 'Auditório Ipê da Uninovafapi',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Rua Professora Julieta Neiva Nunes, 5909-5881',
+                addressLocality: 'Teresina',
+                addressRegion: 'PI',
+                postalCode: '64073-500',
+                addressCountry: 'BR',
+              },
+            },
+            organizer: {
+              '@type': 'Organization',
+              name: 'CONECC',
+              email: 'coneccpi@gmail.com',
+              url: 'https://conecc.com.br',
+            },
+            offers: {
+              '@type': 'Offer',
+              price: '150.00',
+              priceCurrency: 'BRL',
+              availability: 'https://schema.org/InStock',
+              url: 'https://conecc.com.br#ingressos',
+            },
+          }),
+        }}
+      />
     </section>
   );
 }

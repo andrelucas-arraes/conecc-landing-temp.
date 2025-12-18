@@ -72,7 +72,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contato" className="py-24 bg-white">
+    <section id="contato" className="py-24 bg-white" aria-labelledby="contato-heading">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -82,8 +82,8 @@ export default function Contact() {
           viewport={{ once: true, amount: 0.3 }}
           variants={headerVariants}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#5D2126] mb-6">Entre em Contato</h2>
-          <div className="w-16 h-1 bg-[#BC989A] mb-8 mx-auto"></div>
+          <h2 id="contato-heading" className="text-4xl md:text-5xl font-bold text-[#5D2126] mb-6">Entre em Contato</h2>
+          <div className="w-16 h-1 bg-[#BC989A] mb-8 mx-auto" aria-hidden="true"></div>
           <p className="text-lg text-[#593234]">
             Tem dúvidas sobre o CONECC? Entre em contato conosco. Responderemos sua mensagem em breve.
           </p>
@@ -195,9 +195,12 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border-2 border-[#D4B5B7] rounded-lg focus:border-[#BC989A] focus:outline-none transition-colors duration-200 text-[#5D2126]"
+                  className="w-full px-4 py-3 border-2 border-[#D4B5B7] rounded-lg focus:border-[#BC989A] focus:outline-2 focus:outline-[#BC989A] focus:outline-offset-2 transition-colors duration-200 text-[#5D2126]"
                   placeholder="Digite seu nome completo"
+                  aria-required="true"
+                  aria-describedby="name-description"
                 />
+                <p id="name-description" className="sr-only">Campo obrigatório para seu nome completo</p>
               </motion.div>
 
               {/* Email Field */}
@@ -217,9 +220,12 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border-2 border-[#D4B5B7] rounded-lg focus:border-[#BC989A] focus:outline-none transition-colors duration-200 text-[#5D2126]"
+                  className="w-full px-4 py-3 border-2 border-[#D4B5B7] rounded-lg focus:border-[#BC989A] focus:outline-2 focus:outline-[#BC989A] focus:outline-offset-2 transition-colors duration-200 text-[#5D2126]"
                   placeholder="seu.email@exemplo.com"
+                  aria-required="true"
+                  aria-describedby="email-description"
                 />
+                <p id="email-description" className="sr-only">Campo obrigatório para seu email</p>
               </motion.div>
 
               {/* Message Field */}
@@ -239,17 +245,21 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border-2 border-[#D4B5B7] rounded-lg focus:border-[#BC989A] focus:outline-none transition-colors duration-200 text-[#5D2126] resize-none"
+                  className="w-full px-4 py-3 border-2 border-[#D4B5B7] rounded-lg focus:border-[#BC989A] focus:outline-2 focus:outline-[#BC989A] focus:outline-offset-2 transition-colors duration-200 text-[#5D2126] resize-none"
                   placeholder="Digite sua mensagem..."
+                  aria-required="true"
+                  aria-describedby="message-description"
                 ></textarea>
+                <p id="message-description" className="sr-only">Campo obrigatório para sua mensagem</p>
               </motion.div>
 
               {/* Submit Button */}
               <motion.button
                 type="submit"
-                className="w-full px-6 py-3 bg-[#5D2126] text-[#F9F4F5] font-bold rounded-lg transition-all duration-300 hover:bg-[#7D4E50] hover:shadow-lg"
+                className="w-full px-6 py-3 bg-[#5D2126] text-[#F9F4F5] font-bold rounded-lg transition-all duration-300 hover:bg-[#7D4E50] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-[#BC989A] focus-visible:outline-offset-2"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
+                aria-label="Enviar mensagem de contato"
               >
                 Enviar Mensagem
               </motion.button>

@@ -9,14 +9,16 @@ import Edital from '@/components/Edital';
 import Location from '@/components/Location';
 import Partners from '@/components/Partners';
 import InstitutionalSupport from '@/components/InstitutionalSupport';
+import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F9F4F5]">
       <Header />
-      <main className="pt-16">
+      <main id="main-content" className="pt-16" aria-label="Conteúdo principal">
         <Hero />
         <About />
         <Speakers />
@@ -27,6 +29,7 @@ export default function Home() {
         <Location />
         <Partners />
         <InstitutionalSupport />
+        <FAQ />
         <Contact />
       </main>
       <Footer />
