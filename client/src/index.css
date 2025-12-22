@@ -138,6 +138,7 @@
     scroll-padding-top: 6rem; /* Compensar altura do header fixo */
     scroll-behavior: smooth;
     overflow-x: hidden;
+    overflow-y: auto;
     width: 100%;
     max-width: 100vw;
   }
@@ -152,9 +153,11 @@
     @apply bg-background text-foreground font-sans;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
+    overflow-y: auto;
     width: 100%;
     max-width: 100vw;
     position: relative;
+    min-height: 100vh;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -219,11 +222,10 @@
     }
   }
   
-  /* Prevent overflow on all sections */
+  /* Prevent overflow on all sections - only width constraints, no overflow-x */
   section {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
   }
 
   /* Respect reduced motion preference */
@@ -248,7 +250,6 @@
     margin-right: auto;
     padding-left: 1rem; 
     padding-right: 1rem;
-    overflow-x: hidden;
   }
 
   .flex {

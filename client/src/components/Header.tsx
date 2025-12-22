@@ -72,12 +72,12 @@ export default function Header() {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 right-0 z-50 bg-[#5D2126] text-[#F9F4F5] shadow-lg w-full max-w-full overflow-x-hidden"
+      className="fixed top-0 left-0 right-0 z-50 bg-[#5D2126] text-[#F9F4F5] shadow-lg w-full"
       variants={headerVariants}
       initial="hidden"
       animate="visible"
     >
-      <div className="container mx-auto px-4 py-6 flex items-center justify-between w-full max-w-full">
+      <div className="container mx-auto px-4 py-6 flex items-center justify-between">
         {/* Logo */}
         <motion.div
           className="flex items-center gap-3"

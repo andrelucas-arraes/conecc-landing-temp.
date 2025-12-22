@@ -16,9 +16,9 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F9F4F5] overflow-x-hidden w-full max-w-full">
+    <div className="min-h-screen bg-[#F9F4F5] w-full">
       <Header />
-      <main id="main-content" className="pt-16 overflow-x-hidden w-full max-w-full" aria-label="Conteúdo principal">
+      <main id="main-content" className="pt-16 w-full" aria-label="Conteúdo principal">
         <Hero />
         <About />
         <Speakers />
