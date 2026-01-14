@@ -117,7 +117,9 @@ export default function Edital() {
           transition={{ delay: 0.3 }}
         >
           <motion.a
-            href="#"
+            href="https://static.even3.com/geral/EditaldeSubmissao12.01.102a679be24b4ec8adde.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-[#5D2126] text-[#F9F4F5] font-bold rounded-lg transition-all duration-300 hover:bg-[#7D4E50] hover:shadow-lg"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
