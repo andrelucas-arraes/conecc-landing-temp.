@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 const speakers = [
-  // Palestrantes Principais (Destaques)
+  // --- Palestrantes Principais (Destaques) ---
   {
     name: 'Eric Rulli',
     title: 'Médico e Consultor Empresarial',
@@ -16,7 +16,8 @@ const speakers = [
     highlight: true,
     image: 'https://i.ibb.co/ym0Xy1F4/Whats-App-Image-2026-01-14-at-12-17-18-AM.jpg'
   },
-  // Demais Palestrantes
+
+  // --- Demais Palestrantes (Existentes) ---
   {
     name: 'Dr. Marcelo Zugaib',
     title: 'Prof. Titular de Obstetrícia e Ginecologia - FMUSP',
@@ -52,6 +53,36 @@ const speakers = [
     highlight: false,
     image: 'https://i.ibb.co/N2SCBjHt/Whats-App-Image-2026-01-14-at-9-55-01-AM.jpg'
   },
+
+  // --- NOVOS PALESTRANTES ADICIONADOS ---
+  {
+    name: 'Dr. Brenno Andrade',
+    title: 'Nefrologista e Nutrólogo',
+    bio: 'Residência em Nefrologia (UNIFESP) e Clínica Médica (UFPI). Pós-graduado em Nutrologia (ABRAN). Médico do HU-UFPI e Preceptor de residência e internato. Triatleta e Influenciador Digital.',
+    highlight: false,
+    image: '/images/speakers/dr_brenno.jpg' // SUBSTITUIR PELA URL DA FOTO
+  },
+  {
+    name: 'Dr. Wallace Miranda',
+    title: 'Endocrinologista e Metabologista',
+    bio: 'Doutorado e Residência pela USP-RP. Professor da UFPI e Supervisor da residência de Endocrinologia do HU-UFPI. Presidente da SBEM-PI (2023-2024).',
+    highlight: false,
+    image: '/images/speakers/dr_wallace.jpg' // SUBSTITUIR PELA URL DA FOTO
+  },
+  {
+    name: 'Dr. Bruno Monte',
+    title: 'Ortopedista e Traumatologista',
+    bio: 'Especialista em Oncologia Ortopédica (A.C. Camargo). Mestre em Saúde da Família. Pós-graduado em Medicina do Esporte e Dor. Coordenador Adjunto de Medicina da Afya Uninovafapi.',
+    highlight: false,
+    image: '/images/speakers/dr_bruno.jpg' // SUBSTITUIR PELA URL DA FOTO
+  },
+  {
+    name: 'Dr. [Nome do Cardiologista]', // PREENCHER O NOME
+    title: 'Cardiologista e Médico do Esporte',
+    bio: 'Titulado pela SBC. Pós-graduado em Medicina do Exercício e do Esporte e em Terapia Intensiva. Professor de Graduação da Medicina na Afya UNINOVAFAPI.',
+    highlight: false,
+    image: '/images/speakers/dr_cardio.jpg' // SUBSTITUIR PELA URL DA FOTO
+  }
 ];
 
 export default function Speakers() {
@@ -123,7 +154,7 @@ export default function Speakers() {
           {featuredSpeakers.map((featured, index) => (
             <motion.div
               key={index}
-              variants={cardVariants} // Reusando variants simples para entrada
+              variants={cardVariants}
               className="p-8 bg-white rounded-2xl shadow-xl border-t-8 border-[#5D2126] flex flex-col md:flex-row items-center md:items-start gap-6"
               whileHover={{ y: -5, boxShadow: '0 25px 50px -12px rgba(93, 33, 38, 0.25)' }}
             >
