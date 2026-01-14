@@ -60,28 +60,28 @@ const speakers = [
     title: 'Nefrologista e Nutrólogo',
     bio: 'Residência em Nefrologia (UNIFESP) e Clínica Médica (UFPI). Pós-graduado em Nutrologia (ABRAN). Médico do HU-UFPI e Preceptor de residência e internato. Triatleta e Influenciador Digital.',
     highlight: false,
-    image: '/images/speakers/dr_brenno.jpg' // SUBSTITUIR PELA URL DA FOTO
+    image: 'https://i.ibb.co/tpYBSpfn/Whats-App-Image-2026-01-14-at-12-13-15-PM.jpg'
   },
   {
     name: 'Dr. Wallace Miranda',
     title: 'Endocrinologista e Metabologista',
     bio: 'Doutorado e Residência pela USP-RP. Professor da UFPI e Supervisor da residência de Endocrinologia do HU-UFPI. Presidente da SBEM-PI (2023-2024).',
     highlight: false,
-    image: '/images/speakers/dr_wallace.jpg' // SUBSTITUIR PELA URL DA FOTO
+    image: 'https://i.ibb.co/BVSvcfBh/Whats-App-Image-2026-01-14-at-12-13-15-PM-2.jpg'
   },
   {
     name: 'Dr. Bruno Monte',
     title: 'Ortopedista e Traumatologista',
     bio: 'Especialista em Oncologia Ortopédica (A.C. Camargo). Mestre em Saúde da Família. Pós-graduado em Medicina do Esporte e Dor. Coordenador Adjunto de Medicina da Afya Uninovafapi.',
     highlight: false,
-    image: '/images/speakers/dr_bruno.jpg' // SUBSTITUIR PELA URL DA FOTO
+    image: 'https://i.ibb.co/G3b0s3PH/IMG-0757.jpg'
   },
   {
-    name: 'Dr. [Nome do Cardiologista]', // PREENCHER O NOME
+    name: 'Dr. Eduardo Ayremoraes ',
     title: 'Cardiologista e Médico do Esporte',
     bio: 'Titulado pela SBC. Pós-graduado em Medicina do Exercício e do Esporte e em Terapia Intensiva. Professor de Graduação da Medicina na Afya UNINOVAFAPI.',
     highlight: false,
-    image: '/images/speakers/dr_cardio.jpg' // SUBSTITUIR PELA URL DA FOTO
+    image: 'https://i.ibb.co/nMpmTtvc/Whats-App-Image-2026-01-14-at-12-16-17-PM.jpg'
   }
 ];
 
