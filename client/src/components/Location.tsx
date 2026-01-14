@@ -51,7 +51,7 @@ export default function Location() {
         </motion.div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Location Info */}
           <motion.div
             className="space-y-8"
@@ -135,7 +135,7 @@ export default function Location() {
 
           {/* Map Embed */}
           <motion.div
-            className="rounded-lg overflow-hidden shadow-lg h-96 lg:h-full min-h-96"
+            className="rounded-lg overflow-hidden shadow-lg h-full min-h-[400px]"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -144,13 +144,14 @@ export default function Location() {
             transition={{ duration: 0.3 }}
           >
             <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.2174386845018!2d-42.74976642501842!3d-5.068474394908314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78e3a57d18df559%3A0x712a58925d6b5e6b!2sAudit%C3%B3rio%20Ip%C3%AA%20Uninovafapi!5e0!3m2!1spt-BR!2sbr!4v1768401999160!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
+              className="w-full h-full"
               style={{ border: 0 }}
-              loading="lazy"
               allowFullScreen
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.6788319485307!2d-42.80150!3d-5.08944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78c2b5c5c5c5c5c5%3A0x5c5c5c5c5c5c5c5c!2sAuditório%20Ipê%20-%20Uninovafapi!5e0!3m2!1spt-BR!2sbr!4v1234567890"
             ></iframe>
           </motion.div>
         </div>

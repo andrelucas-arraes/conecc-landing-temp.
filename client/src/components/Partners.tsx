@@ -129,6 +129,7 @@ export default function Partners() {
                                         <img
                                             src="/images/claro-logo.jpg"
                                             alt="Claro - Patrocinador"
+                                            loading="lazy"
                                             className="w-full h-full object-cover rounded-lg"
                                         />
                                     </motion.a>
