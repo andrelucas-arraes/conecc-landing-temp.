@@ -21,21 +21,21 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Format message for WhatsApp
     const whatsappMessage = `Olá! Meu nome é ${formData.name}.\n\nEmail: ${formData.email}\n\nMensagem:\n${formData.message}`;
-    
+
     // Encode message for URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    
+
     // WhatsApp Business API URL (you can change the number)
     // Format: https://wa.me/5511999999999?text=message
     const whatsappNumber = '5586999999999'; // Replace with actual WhatsApp number
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-    
+
     // Open WhatsApp in new tab
     window.open(whatsappUrl, '_blank');
-    
+
     // Reset form
     setFormData({ name: '', email: '', message: '' });
     setSubmitted(true);
@@ -107,7 +107,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact Information */}
           <motion.div
-            className="space-y-8"
+            className="space-y-8 order-2 lg:order-1"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -187,7 +187,7 @@ export default function Contact() {
 
           {/* Contact Form */}
           <motion.div
-            className="p-8 bg-white rounded-lg shadow-lg"
+            className="p-8 bg-white rounded-lg shadow-lg order-1 lg:order-2"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}

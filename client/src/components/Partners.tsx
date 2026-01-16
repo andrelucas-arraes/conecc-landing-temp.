@@ -3,28 +3,49 @@ import { motion } from 'framer-motion';
 const sponsorTiers = [
     {
         name: 'Patrocinador Master',
-        count: 1,
         size: 'xlarge',
+        sponsors: [
+            { name: 'Patrocinador Master', logo: 'https://i.ibb.co/RGwDzn5s/Design-sem-nome-2.jpg', link: 'https://www.instagram.com/grupomedcof/' },
+        ]
     },
     {
         name: 'Patrocinador Executivo',
-        count: 3,
         size: 'large',
+        sponsors: [
+            { name: 'Patrocinador Executivo 1', logo: 'https://i.ibb.co/BHCZG1Zk/upscalemedia-transformed.jpg', link: 'https://www.instagram.com/medsafebrasil' },
+            { name: 'Patrocinador Executivo 2', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: 'https://www.instagram.com/medsafebrasil' },
+            { name: 'Patrocinador Executivo 3', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: 'https://www.instagram.com/medsafebrasil' },
+
+        ]
     },
     {
         name: 'Patrocinador Premium',
-        count: 3,
         size: 'medium',
+        sponsors: [
+            { name: 'Patrocinador Premium 1', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+            { name: 'Patrocinador Premium 2', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+            { name: 'Patrocinador Premium 3', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+        ]
     },
     {
         name: 'Patrocinador Destaque',
-        count: 4,
         size: 'small',
+        sponsors: [
+            { name: 'Patrocinador Destaque 1', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+            { name: 'Patrocinador Destaque 2', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+            { name: 'Patrocinador Destaque 3', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+            { name: 'Patrocinador Destaque 4', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+        ]
     },
     {
         name: 'Patrocinador Essencial',
-        count: 4,
         size: 'xsmall',
+        sponsors: [
+            { name: 'Patrocinador Essencial 1', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+            { name: 'Patrocinador Essencial 2', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+            { name: 'Patrocinador Essencial 3', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+            { name: 'Patrocinador Essencial 4', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+        ]
     },
 ];
 
@@ -107,12 +128,12 @@ export default function Partners() {
                                     }`}
                                 variants={gridVariants}
                             >
-                                {Array.from({ length: tier.count }).map((_, index) => (
+                                {tier.sponsors.map((sponsor, index) => (
                                     <motion.a
                                         key={index}
-                                        href="https://www.claro.com.br"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                        href={sponsor.link || '#'}
+                                        target={sponsor.link ? "_blank" : undefined}
+                                        rel={sponsor.link ? "noopener noreferrer" : undefined}
                                         className={`bg-[#F9F4F5] rounded-lg border-2 border-[#D4B5B7] flex items-center justify-center transition-all duration-300 hover:border-[#BC989A] hover:shadow-lg cursor-pointer ${tier.size === 'xlarge'
                                             ? 'h-72'
                                             : tier.size === 'large'
@@ -127,8 +148,8 @@ export default function Partners() {
                                         whileHover={{ y: -5, scale: 1.03 }}
                                     >
                                         <img
-                                            src="/images/claro-logo.jpg"
-                                            alt="Claro - Patrocinador"
+                                            src={sponsor.logo}
+                                            alt={`${sponsor.name} - Patrocinador`}
                                             loading="lazy"
                                             className="w-full h-full object-cover rounded-lg"
                                         />

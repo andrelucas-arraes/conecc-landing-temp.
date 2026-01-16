@@ -17,10 +17,6 @@ const faqs: FAQItem[] = [
     answer: 'Sim! Grupos a partir de 5 pessoas têm desconto de 10%. Entre em contato através do email coneccpi@gmail.com ou WhatsApp para mais informações.',
   },
   {
-    question: 'O evento oferece alimentação?',
-    answer: 'Sim, o evento oferece coffee breaks durante os intervalos. Almoço não está incluído, mas há opções de restaurantes próximos ao local do evento.',
-  },
-  {
     question: 'Posso me inscrever apenas nos cursos práticos?',
     answer: 'Sim, é possível se inscrever apenas nos cursos práticos (19-21 de março) ou apenas no congresso (26-29 de março), ou em ambos com desconto especial.',
   },
@@ -29,16 +25,12 @@ const faqs: FAQItem[] = [
     answer: 'Sim, o Auditório Ipê da Uninovafapi possui estacionamento próprio com capacidade para centenas de veículos, totalmente gratuito para participantes.',
   },
   {
-    question: 'O evento é acessível para pessoas com mobilidade reduzida?',
-    answer: 'Sim, o local é totalmente acessível, com rampas, elevadores e banheiros adaptados. Entre em contato conosco para garantir as melhores acomodações.',
-  },
-  {
     question: 'Posso cancelar minha inscrição?',
     answer: 'Sim, cancelamentos até 30 dias antes do evento têm reembolso de 80%. Entre 30 e 15 dias antes, 50% de reembolso. Menos de 15 dias, sem reembolso.',
   },
   {
-    question: 'Há hospedagem com desconto para participantes?',
-    answer: 'Sim, temos parcerias com hotéis próximos. Entre em contato conosco para receber a lista de hotéis parceiros com descontos especiais.',
+    question: 'O congresso terá Anais?',
+    answer: 'Sim. O Congresso contará com Anais oficiais, nos quais serão publicados os trabalhos científicos aprovados, conforme as normas e prazos estabelecidos pela Comissão Científica.',
   },
 ];
 

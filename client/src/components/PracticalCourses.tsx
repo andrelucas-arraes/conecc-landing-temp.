@@ -4,31 +4,29 @@ const courseDays = [
   {
     date: '19/03',
     day: 'Quinta-feira',
-    title: 'Dia 1',
+    location: 'UNINASSAU',
     courses: [
-      'Curso de Sutura e Técnicas Cirúrgicas',
-      'Workshop de Procedimentos em Emergência',
-      'Curso Prático de Ultrassonografia',
+      { name: 'IOT Adulto', price: 'R$ 80', spots: '30 vagas', shift: 'Manhã' },
+      { name: 'RCP Pediátrico', price: 'R$ 120', spots: '20 vagas', shift: 'Tarde' },
     ],
   },
   {
     date: '20/03',
     day: 'Sexta-feira',
-    title: 'Dia 2',
+    location: 'UNINOVAFAPI',
     courses: [
-      'Treinamento em ACLS (Advanced Cardiovascular Life Support)',
-      'Curso de Procedimentos Estéticos',
-      'Workshop de Técnicas Endoscópicas',
+      { name: 'RCP Adulto', price: 'R$ 120', spots: '20 vagas', shift: 'Manhã' },
+      { name: 'Parto', price: 'R$ 80', spots: '20 vagas', shift: 'Tarde' },
+      { name: 'Imobilização', price: 'R$ 80', spots: '20 vagas', shift: 'Tarde' },
     ],
   },
   {
     date: '21/03',
     day: 'Sábado',
-    title: 'Dia 3',
+    location: 'FACID',
     courses: [
-      'Curso de Simulação Realística',
-      'Workshop de Técnicas Minimamente Invasivas',
-      'Treinamento em Procedimentos Ortopédicos',
+      { name: 'Acessos CV', price: 'R$ 80', spots: '20 vagas', shift: 'Manhã' },
+      { name: 'Sutura', price: 'R$ 90', spots: '50 vagas (2 turmas)', shift: 'Manhã' },
     ],
   },
 ];
@@ -49,6 +47,7 @@ export default function PracticalCourses() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
+      y: 0,
       transition: {
         staggerChildren: 0.2,
       },
@@ -92,8 +91,7 @@ export default function PracticalCourses() {
           <h2 className="text-4xl md:text-5xl font-bold text-[#F9F4F5] mb-6">Cursos Práticos</h2>
           <div className="w-16 h-1 bg-[#BC989A] mb-8 mx-auto"></div>
           <p className="text-lg text-[#D4B5B7]">
-            Os cursos práticos acontecem de 19 a 21 de março de 2026, oferecendo treinamento hands-on em
-            diversas especialidades médicas.
+            Os cursos práticos acontecem de 19 a 21 de março. <br /> Confira a programação, locais e garanta sua vaga.
           </p>
         </motion.div>
 
@@ -109,32 +107,51 @@ export default function PracticalCourses() {
             <motion.div key={index} className="relative" variants={cardVariants}>
               {/* Card */}
               <motion.div
-                className="p-8 bg-white rounded-lg shadow-lg h-full"
+                className="p-6 bg-white rounded-lg shadow-lg h-full flex flex-col"
                 whileHover={{ y: -10, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                {/* Date Badge */}
-                <div className="mb-4 inline-block">
-                  <p className="text-2xl font-bold text-[#5D2126]">{courseDay.date}</p>
-                  <p className="text-sm text-[#BC989A] font-semibold">{courseDay.day}</p>
+                {/* Date Badge & Location */}
+                <div className="mb-6 border-b border-gray-100 pb-4">
+                  <div className="flex justify-between items-baseline mb-1">
+                    <p className="text-2xl font-bold text-[#5D2126]">{courseDay.date}</p>
+                    <p className="text-sm text-[#BC989A] font-bold uppercase tracking-wide">{courseDay.day}</p>
+                  </div>
+                  <div className="flex items-center gap-2 text-[#593234]">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                    <p className="font-semibold text-lg">{courseDay.location}</p>
+                  </div>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-[#5D2126] mb-6">{courseDay.title}</h3>
-
                 {/* Courses List */}
-                <ul className="space-y-4">
+                <ul className="space-y-6 flex-grow">
                   {courseDay.courses.map((course, idx) => (
                     <motion.li
                       key={idx}
-                      className="flex gap-3"
+                      className="flex gap-3 group"
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.1 * idx }}
                     >
-                      <div className="flex-shrink-0 w-2 h-2 bg-[#BC989A] rounded-full mt-2"></div>
-                      <span className="text-[#593234] font-medium">{course}</span>
+                      <div className="flex-shrink-0 w-2 h-2 bg-[#BC989A] rounded-full mt-2 group-hover:bg-[#5D2126] transition-colors"></div>
+                      <div className="w-full">
+                        <h4 className="text-[#593234] font-bold text-lg leading-tight mb-1">{course.name}</h4>
+
+                        <div className="flex flex-wrap gap-2 text-sm mt-1">
+                          <span className="bg-[#5D2126]/10 text-[#5D2126] px-2 py-0.5 rounded font-medium">
+                            {course.shift}
+                          </span>
+                          <span className="bg-[#BC989A]/20 text-[#593234] px-2 py-0.5 rounded font-medium">
+                            {course.price}
+                          </span>
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1 italic">
+                          {course.spots}
+                        </p>
+                      </div>
                     </motion.li>
                   ))}
                 </ul>
@@ -164,15 +181,14 @@ export default function PracticalCourses() {
         >
           <motion.a
             href="#ingressos"
-            className="inline-block px-8 py-4 bg-[#BC989A] text-[#5D2126] font-bold rounded-lg transition-all duration-300 hover:bg-[#D4B5B7] hover:shadow-2xl"
+            className="inline-block px-8 py-4 bg-[#BC989A] text-[#5D2126] font-bold rounded-lg transition-all duration-300 hover:bg-[#D4B5B7] hover:shadow-2xl hover:text-[#4a1a1e]"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
           >
-            Inscreva-se nos Cursos
+            Inscreva-se nos Cursos Práticos
           </motion.a>
         </motion.div>
       </div>
     </section>
   );
 }
-

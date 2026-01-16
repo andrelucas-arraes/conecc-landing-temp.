@@ -12,6 +12,7 @@ import InstitutionalSupport from '@/components/InstitutionalSupport';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
 
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

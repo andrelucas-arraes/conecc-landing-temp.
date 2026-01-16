@@ -21,67 +21,67 @@ interface TicketBatch {
 const ticketBatches: TicketBatch[] = [
   {
     name: 'LOTE PROMOCIONAL',
-    vacancies: '50 VAGAS',
+    vacancies: '',
     totalVacancies: 50,
     remainingVacancies: 12,
-    deadline: '15/02/2026',
+    deadline: '',
     categories: [
-      { category: 'Estudantes', price: 'R$ 150,00' },
-      { category: 'Profissionais de outras áreas', price: 'R$ 180,00' },
-      { category: 'Médicos/Residentes', price: 'R$ 200,00' },
+      { category: 'Médicos/Residentes', price: 'R$ 180,00' },
+      { category: 'Estudantes', price: 'R$ 120,00' },
+      { category: 'Profissionais de outras áreas', price: 'R$ 160,00' },
     ],
     highlighted: true,
   },
   {
     name: 'LOTE ESPECIAL',
-    subtitle: 'PROGRAMAS ESTUDANTIS DO GOVERNO FEDERAL',
-    vacancies: '15 VAGAS (FIES, FIES SOCIAL, PROUNI)',
+    subtitle: '(FIES, FIES SOCIAL, PROUNI)',
+    vacancies: '',
     totalVacancies: 15,
     remainingVacancies: 3,
-    categories: [{ category: 'Estudantes', price: 'R$ 100,00' }],
+    categories: [{ category: 'Estudantes', price: 'R$ 120,00' }],
   },
   {
     name: '1º LOTE',
-    vacancies: '50 VAGAS',
+    vacancies: '',
     totalVacancies: 50,
     remainingVacancies: 35,
     categories: [
-      { category: 'Estudantes', price: 'R$ 250,00' },
-      { category: 'Profissionais de outras áreas', price: 'R$ 280,00' },
-      { category: 'Médicos/Residentes', price: 'R$ 300,00' },
+      { category: 'Estudantes', price: 'Em breve' },
+      { category: 'Profissionais de outras áreas', price: 'Em breve' },
+      { category: 'Médicos/Residentes', price: 'Em breve' },
     ],
   },
   {
     name: '2º LOTE',
-    vacancies: '150 VAGAS',
+    vacancies: '',
     totalVacancies: 150,
     remainingVacancies: 150,
     categories: [
-      { category: 'Estudantes', price: 'R$ 300,00' },
-      { category: 'Profissionais de outras áreas', price: 'R$ 320,00' },
-      { category: 'Médicos/Residentes', price: 'R$ 360,00' },
+      { category: 'Estudantes', price: 'Em breve' },
+      { category: 'Profissionais de outras áreas', price: 'Em breve' },
+      { category: 'Médicos/Residentes', price: 'Em breve' },
     ],
   },
   {
     name: '3º LOTE',
-    vacancies: '150 VAGAS',
+    vacancies: '',
     totalVacancies: 150,
     remainingVacancies: 150,
     categories: [
-      { category: 'Estudantes', price: 'R$ 350,00' },
-      { category: 'Profissionais de outras áreas', price: 'R$ 380,00' },
-      { category: 'Médicos/Residentes', price: 'R$ 410,00' },
+      { category: 'Estudantes', price: 'Em breve' },
+      { category: 'Profissionais de outras áreas', price: 'Em breve' },
+      { category: 'Médicos/Residentes', price: 'Em breve' },
     ],
   },
   {
     name: '4º LOTE',
-    vacancies: '150 VAGAS',
+    vacancies: '',
     totalVacancies: 150,
     remainingVacancies: 150,
     categories: [
-      { category: 'Estudantes', price: 'R$ 400,00' },
-      { category: 'Profissionais de outras áreas', price: 'R$ 420,00' },
-      { category: 'Médicos/Residentes', price: 'R$ 460,00' },
+      { category: 'Estudantes', price: 'Em breve' },
+      { category: 'Profissionais de outras áreas', price: 'Em breve' },
+      { category: 'Médicos/Residentes', price: 'Em breve' },
     ],
   },
 ];
@@ -176,8 +176,8 @@ export default function Tickets() {
               <motion.button
                 onClick={() => setExpandedBatch(expandedBatch === index ? null : index)}
                 className={`w-full text-left p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-between group focus-visible:outline-2 focus-visible:outline-[#5D2126] focus-visible:outline-offset-2 ${batch.highlighted
-                    ? 'bg-linear-to-r from-[#5D2126] to-[#7D4E50] text-[#F9F4F5]'
-                    : 'bg-white'
+                  ? 'bg-linear-to-r from-[#5D2126] to-[#7D4E50] text-[#F9F4F5]'
+                  : 'bg-white'
                   }`}
                 whileHover={{ x: 5 }}
                 aria-expanded={expandedBatch === index}

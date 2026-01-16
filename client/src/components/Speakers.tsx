@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const speakers = [
   // --- Palestrantes Principais (Destaques) ---
   {
-    name: 'Eric Rulli',
+    name: 'Dr. Eric Rulli - Médico na Prática',
     title: 'Médico e Consultor Empresarial',
     bio: 'Formado em Direito (USP) e Medicina (UNICAMP). Presidente da Comissão Nacional do Médico Jovem (AMB) e Conselheiro Fiscal do AgSUS. Atuou como concursado pelo TJ-SP por 12 anos. Criador do Método Médico na Prática.',
     highlight: true,
@@ -17,7 +17,7 @@ const speakers = [
     image: 'https://i.ibb.co/ym0Xy1F4/Whats-App-Image-2026-01-14-at-12-17-18-AM.jpg'
   },
 
-  // --- Demais Palestrantes (Existentes) ---
+  // --- Demais Palestrantes (Anteriores) ---
   {
     name: 'Dr. Marcelo Zugaib',
     title: 'Prof. Titular de Obstetrícia e Ginecologia - FMUSP',
@@ -53,8 +53,6 @@ const speakers = [
     highlight: false,
     image: 'https://i.ibb.co/N2SCBjHt/Whats-App-Image-2026-01-14-at-9-55-01-AM.jpg'
   },
-
-  // --- NOVOS PALESTRANTES ADICIONADOS ---
   {
     name: 'Dr. Brenno Andrade',
     title: 'Nefrologista e Nutrólogo',
@@ -82,7 +80,94 @@ const speakers = [
     bio: 'Titulado pela SBC. Pós-graduado em Medicina do Exercício e do Esporte e em Terapia Intensiva. Professor de Graduação da Medicina na Afya UNINOVAFAPI.',
     highlight: false,
     image: 'https://i.ibb.co/nMpmTtvc/Whats-App-Image-2026-01-14-at-12-16-17-PM.jpg'
-  }
+  },
+
+  // --- NOVOS ADICIONADOS (Psiquiatria, Dermato e Emergência) ---
+  {
+    name: 'Dr. Leonardo Sérvio Luz',
+    title: 'Psiquiatra e Coord. Medicina UFPI',
+    bio: 'Graduado pela UFPI, residência pela PUC/SP e Doutorado em Bioética (São Camilo). Professor da UFPI e Unifacid, e Coordenador do Curso de Medicina da UFPI.',
+    highlight: false,
+    image: 'https://i.ibb.co/kgQrVZJK/Whats-App-Image-2026-01-14-at-9-05-13-PM.jpg'
+  },
+  {
+    name: 'Dra. Marcela Mendes',
+    title: 'Dermatologista',
+    bio: 'Membro titular da SBD e SBCD. Residência pelo HU-UFPI e Fellowship em Cosmiatria (RJ). Atua como Perita médica legista da Polícia Civil do Piauí.',
+    highlight: false,
+    image: 'https://i.ibb.co/RTykX9MV/Whats-App-Image-2026-01-15-at-10-42-45-PM.jpg'
+  },
+  {
+    name: 'Dra. Ana Zanatta',
+    title: 'Dermatologista e Tricologista',
+    bio: 'Graduada pela UFPI com residência na UFC. Fellowship em Cosmiatria e Procedimentos Invasivos. Especialista em Tricologia e Fellow pelo Hospital Saint-Louis (Paris).',
+    highlight: false,
+    image: 'https://i.ibb.co/tT455rB3/Whats-App-Image-2026-01-14-at-9-08-16-PM.jpg'
+  },
+  {
+    name: 'Dr. Eduardo dos Santos Sousa',
+    title: 'Neurologista',
+    bio: 'Mestre pela USP-RP. Neurointervencionista e Preceptor da Residência do HGV. Atua como Neurocirurgião no Hospital de Urgências de Teresina (HUT).',
+    highlight: false,
+    image: 'https://i.ibb.co/pvvhw8rz/Whats-App-Image-2026-01-14-at-9-51-48-PM.jpg'
+  },
+  {
+    name: 'Dr. Nagele Lima',
+    title: 'Emergencista e Intensivista',
+    bio: 'Especialista em Emergência (Abramede), Cardiologia e Medicina Intensiva. Neurointensivista (Sírio Libanês) e coord. de UTIs em Teresina e do Hospital Monte Castelo.',
+    highlight: false,
+    image: 'https://i.ibb.co/LXvTLN9b/Whats-App-Image-2026-01-14-at-9-52-36-PM.jpg'
+  },
+  {
+    name: 'Dra. Deborah Carvalho Correia Bastos',
+    title: 'Geriatra e Profª da UFPI',
+    bio: 'Graduada pela UESPI com residência e mestrado pela UNIFESP. Especialista pela SBGG. Professora e Coordenadora de Geriatria da UFPI e Preceptora do HU-UFPI.',
+    highlight: false,
+    image: 'https://i.ibb.co/RpCbNt8N/Whats-App-Image-2026-01-14-at-9-04-53-PM.jpg'
+  },
+  {
+    name: 'Dra. Ingrid Carvalho',
+    title: 'Psiquiatra e Profª da UFPI',
+    bio: 'Graduada pela UFPI com residência em Psiquiatria pela USP-RP. Professora e Coordenadora do Programa de Residência de Psiquiatria da UFPI.',
+    highlight: false,
+    image: 'https://i.ibb.co/sJzZXSKG/Whats-App-Image-2026-01-14-at-9-04-53-PM-1.jpg'
+  },
+  {
+    name: 'Dr. Kelson James Almeida',
+    title: 'Neurologista e Prof. da UFPI',
+    bio: 'Graduado pela UFPI, com residência e Doutorado em Neurologia pela USP (HCFMUSP). Professor, Chefe de Departamento e orientador de pós-graduação na UFPI.',
+    highlight: false,
+    image: 'https://i.ibb.co/fzXTPQtg/Whats-App-Image-2026-01-14-at-9-04-54-PM.jpg'
+  },
+  {
+    name: 'Dr. Luan Arnon de Melo Cunha',
+    title: 'Psiquiatra Infantil e Professor',
+    bio: 'Graduado pela UFPI, com residência em Psiquiatria Geral e da Infância/Adolescência pela USP. Professor da Uninovafapi, Preceptor na AFYA e Perito da SESAPI.',
+    highlight: false,
+    image: 'https://i.ibb.co/r2JxtVBR/Whats-App-Image-2026-01-14-at-9-04-54-PM-1.jpg'
+  },
+  {
+    name: 'Dr. Romilto Pacheco',
+    title: 'Neurocirurgião e Neurorradiologista',
+    bio: 'Graduado pela UFPI, com residência em Neurocirurgia e Neurorradiologia pela USP-RP. Mestre em Ciências das Imagens pela USP-RP. Neurointervencionista no HGV e Neurocirurgião no HUT.',
+    highlight: false,
+    image: 'https://i.ibb.co/5g6LYMyW/Whats-App-Image-2026-01-14-at-9-53-15-PM.jpg'
+  },
+  {
+    name: 'Dr. Edson Neto',
+    title: 'Cirurgião Plástico',
+    bio: 'Graduado pela UESPI com 14 anos de atuação exclusiva em cirurgia plástica. Especialista em contorno corporal e mama, com mais de 5 mil vidas transformadas e foco na autoestima feminina.',
+    highlight: false,
+    image: 'https://i.ibb.co/HpFMY3W2/Whats-App-Image-2026-01-14-at-10-30-57-PM.jpg',
+    module: 'Estética e Dermatologia'
+  }, {
+    name: 'Dra. Juliane Brígida',
+    title: 'Cirurgiã Plástica',
+    bio: 'Graduada pela UFPI. Residência em Cirurgia Geral pelo Hospital da Restauração (PE) e em Cirurgia Plástica pelo Hospital Universitário Professor Edgard Santos (BA).',
+    highlight: false,
+    image: 'https://i.ibb.co/BV1My89j/JAD-169.jpg',
+  },
+
 ];
 
 export default function Speakers() {

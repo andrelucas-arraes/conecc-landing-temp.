@@ -3,8 +3,13 @@ import { motion } from 'framer-motion';
 const supportTiers = [
     {
         name: 'Apoio Institucional',
-        count: 4,
         size: 'medium',
+        supporters: [
+            { name: 'Apoio Institucional 1', logo: 'https://i.ibb.co/ch9219nC/Design-sem-nome.png', link: 'https://www.instagram.com/crmpiaui' },
+            { name: 'Apoio Institucional 2', logo: 'https://i.ibb.co/rRxJTYN3/Design-sem-nome-2.png', link: 'https://www.instagram.com/ambpiaui' },
+            { name: 'Apoio Institucional 3', logo: 'https://i.ibb.co/cK2Ly4k4/Design-sem-nome-3.png', link: 'https://www.instagram.com/simepi' },
+            { name: 'Apoio Institucional 4', logo: 'https://i.ibb.co/qMzdxVgz/Design-sem-nome-4.png', link: 'https://www.instagram.com/acadmedicinapi' },
+        ]
     },
 ];
 
@@ -72,10 +77,13 @@ export default function InstitutionalSupport() {
                         >
                             {/* Support Grid */}
                             <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto" variants={gridVariants}>
-                                {Array.from({ length: tier.count }).map((_, index) => (
-                                    <motion.div
+                                {tier.supporters.map((supporter, index) => (
+                                    <motion.a
                                         key={index}
-                                        className={`bg-white rounded-lg border-2 border-[#D4B5B7] flex items-center justify-center transition-all duration-300 hover:border-[#BC989A] hover:shadow-lg ${tier.size === 'large'
+                                        href={supporter.link || '#'}
+                                        target={supporter.link ? "_blank" : undefined}
+                                        rel={supporter.link ? "noopener noreferrer" : undefined}
+                                        className={`bg-white rounded-lg border-2 border-[#D4B5B7] flex items-center justify-center transition-all duration-300 hover:border-[#BC989A] hover:shadow-lg cursor-pointer ${tier.size === 'large'
                                             ? 'h-32 sm:h-40 lg:h-48'
                                             : tier.size === 'medium'
                                                 ? 'h-28 sm:h-36 lg:h-40'
@@ -85,11 +93,11 @@ export default function InstitutionalSupport() {
                                         whileHover={{ y: -5, scale: 1.05 }}
                                     >
                                         <img
-                                            src="/images/amb-pi-logo.png"
-                                            alt="AMB-PI - Apoio Institucional"
+                                            src={supporter.logo}
+                                            alt={`${supporter.name} - Apoio Institucional`}
                                             className="w-full h-full object-contain p-6"
                                         />
-                                    </motion.div>
+                                    </motion.a>
                                 ))}
                             </motion.div>
                         </motion.div>
