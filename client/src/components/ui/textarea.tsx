@@ -20,8 +20,8 @@ function Textarea({
     onKeyDown: handleKeyDown,
   } = useComposition<HTMLTextAreaElement>({
     onKeyDown: (e) => {
-   
-      const isComposing = (e.nativeEvent as any).isComposing || dialogComposition.justEndedComposing();
+
+      const isComposing = (e.nativeEvent as KeyboardEvent & { isComposing?: boolean }).isComposing || dialogComposition.justEndedComposing();
 
 
       if (e.key === "Enter" && !e.shiftKey && isComposing) {

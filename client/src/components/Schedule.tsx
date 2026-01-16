@@ -305,18 +305,18 @@ export default function Schedule() {
                                 variants={eventItemVariants}
                                 whileHover={{ x: 5, borderColor: '#5D2126' }}
                               >
-                                <div className="flex gap-4">
-                                  <div className="shrink-0 min-w-[160px]">
-                                    <div className="bg-[#F9F4F5] px-3 py-1 rounded-lg text-center">
-                                      <p className="font-bold text-[#5D2126] whitespace-nowrap">{event.time}</p>
+                                <div className="flex flex-col md:flex-row gap-3 md:gap-4">
+                                  <div className="shrink-0 md:min-w-[160px]">
+                                    <div className="bg-[#F9F4F5] px-3 py-1 rounded-lg text-center md:text-center w-fit md:w-full">
+                                      <p className="font-bold text-[#5D2126] text-sm md:text-base">{event.time}</p>
                                     </div>
                                   </div>
-                                  <div className="flex-1">
-                                    <p className="text-[#593234] font-medium leading-relaxed uppercase">{event.title}</p>
+                                  <div className="flex-1 min-w-0">
+                                    <p className="text-[#593234] font-medium leading-relaxed uppercase text-sm md:text-base break-words">{event.title}</p>
                                     {event.speaker && (
-                                      <div className="flex items-center gap-2 mt-2">
-                                        <div className="w-2 h-2 rounded-full bg-[#BC989A]"></div>
-                                        <p className="text-[#BC989A] text-sm font-medium">{event.speaker}</p>
+                                      <div className="flex items-start gap-2 mt-2">
+                                        <div className="w-2 h-2 rounded-full bg-[#BC989A] shrink-0 mt-1.5"></div>
+                                        <p className="text-[#BC989A] text-xs md:text-sm font-medium break-words">{event.speaker}</p>
                                       </div>
                                     )}
                                   </div>
@@ -335,18 +335,18 @@ export default function Schedule() {
                           variants={eventItemVariants}
                           whileHover={{ x: 5, borderColor: '#5D2126' }}
                         >
-                          <div className="flex gap-4">
-                            <div className="shrink-0 min-w-[160px]">
-                              <div className="bg-[#F9F4F5] px-3 py-1 rounded-lg text-center">
-                                <p className="font-bold text-[#5D2126] whitespace-nowrap">{event.time}</p>
+                          <div className="flex flex-col md:flex-row gap-3 md:gap-4">
+                            <div className="shrink-0 md:min-w-[160px]">
+                              <div className="bg-[#F9F4F5] px-3 py-1 rounded-lg text-center md:text-center w-fit md:w-full">
+                                <p className="font-bold text-[#5D2126] text-sm md:text-base">{event.time}</p>
                               </div>
                             </div>
-                            <div className="flex-1">
-                              <p className="text-[#593234] font-medium leading-relaxed uppercase">{event.title}</p>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-[#593234] font-medium leading-relaxed uppercase text-sm md:text-base break-words">{event.title}</p>
                               {event.speaker && (
-                                <div className="flex items-center gap-2 mt-2">
-                                  <div className="w-2 h-2 rounded-full bg-[#BC989A]"></div>
-                                  <p className="text-[#BC989A] text-sm font-medium">{event.speaker}</p>
+                                <div className="flex items-start gap-2 mt-2">
+                                  <div className="w-2 h-2 rounded-full bg-[#BC989A] shrink-0 mt-1.5"></div>
+                                  <p className="text-[#BC989A] text-xs md:text-sm font-medium break-words">{event.speaker}</p>
                                 </div>
                               )}
                             </div>

@@ -194,6 +194,9 @@ export default function Contact() {
             variants={formVariants}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Form Title */}
+              <h3 className="text-2xl font-bold text-[#5D2126] mb-4 text-center">Envie sua Mensagem</h3>
+
               {/* Name Field */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

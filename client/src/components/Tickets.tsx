@@ -16,6 +16,7 @@ interface TicketBatch {
   deadline?: string;
   categories: TicketCategory[];
   highlighted?: boolean;
+  disabled?: boolean;
 }
 
 const ticketBatches: TicketBatch[] = [
@@ -50,6 +51,7 @@ const ticketBatches: TicketBatch[] = [
       { category: 'Profissionais de outras áreas', price: 'Em breve' },
       { category: 'Médicos/Residentes', price: 'Em breve' },
     ],
+    disabled: true,
   },
   {
     name: '2º LOTE',
@@ -61,6 +63,7 @@ const ticketBatches: TicketBatch[] = [
       { category: 'Profissionais de outras áreas', price: 'Em breve' },
       { category: 'Médicos/Residentes', price: 'Em breve' },
     ],
+    disabled: true,
   },
   {
     name: '3º LOTE',
@@ -72,6 +75,7 @@ const ticketBatches: TicketBatch[] = [
       { category: 'Profissionais de outras áreas', price: 'Em breve' },
       { category: 'Médicos/Residentes', price: 'Em breve' },
     ],
+    disabled: true,
   },
   {
     name: '4º LOTE',
@@ -83,6 +87,7 @@ const ticketBatches: TicketBatch[] = [
       { category: 'Profissionais de outras áreas', price: 'Em breve' },
       { category: 'Médicos/Residentes', price: 'Em breve' },
     ],
+    disabled: true,
   },
 ];
 
@@ -260,17 +265,26 @@ export default function Tickets() {
                       ))}
 
                       {/* CTA Button */}
-                      <motion.a
-                        href="https://www.even3.com.br/conecc-i-congresso-de-especialidades-clinicas-e-cirurgicas-674375/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full mt-4 py-3 px-4 bg-[#5D2126] text-[#F9F4F5] font-bold rounded-lg transition-all duration-300 hover:bg-[#7D4E50] focus-visible:outline-2 focus-visible:outline-[#BC989A] focus-visible:outline-offset-2 inline-block text-center"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        aria-label={`Inscrever-se no ${batch.name}`}
-                      >
-                        {batch.highlighted ? 'Garantir Minha Vaga' : 'Inscrever-se'}
-                      </motion.a>
+                      {batch.disabled ? (
+                        <div
+                          className="w-full mt-4 py-3 px-4 bg-[#BC989A] text-[#F9F4F5] font-bold rounded-lg inline-block text-center cursor-not-allowed opacity-60"
+                          aria-disabled="true"
+                        >
+                          Em Breve
+                        </div>
+                      ) : (
+                        <motion.a
+                          href="https://www.even3.com.br/conecc-i-congresso-de-especialidades-clinicas-e-cirurgicas-674375/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full mt-4 py-3 px-4 bg-[#5D2126] text-[#F9F4F5] font-bold rounded-lg transition-all duration-300 hover:bg-[#7D4E50] focus-visible:outline-2 focus-visible:outline-[#BC989A] focus-visible:outline-offset-2 inline-block text-center"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          aria-label={`Inscrever-se no ${batch.name}`}
+                        >
+                          {batch.highlighted ? 'Garantir Minha Vaga' : 'Inscrever-se'}
+                        </motion.a>
+                      )}
                     </div>
                   </motion.div>
                 )}

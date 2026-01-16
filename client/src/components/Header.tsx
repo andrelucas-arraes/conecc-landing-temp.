@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence,  } from 'framer-motion';
+import { motion, AnimatePresence, } from 'framer-motion';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,7 +33,7 @@ export default function Header() {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: 'easeOut',
+        ease: 'easeOut' as const,
       },
     },
   };
@@ -44,7 +44,7 @@ export default function Header() {
       height: 0,
       transition: {
         duration: 0.3,
-        ease: 'easeInOut',
+        ease: 'easeInOut' as const,
       },
     },
     visible: {
@@ -52,7 +52,7 @@ export default function Header() {
       height: 'auto',
       transition: {
         duration: 0.3,
-        ease: 'easeInOut',
+        ease: 'easeInOut' as const,
         staggerChildren: 0.05,
         delayChildren: 0.1,
       },
