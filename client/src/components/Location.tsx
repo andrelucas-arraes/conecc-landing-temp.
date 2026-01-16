@@ -70,10 +70,10 @@ export default function Location() {
                   <MapPin className="w-6 h-6 text-[#5D2126]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#5D2126] mb-2">Auditório Ipê da Uninovafapi</h3>
+                  <h3 className="text-xl font-bold text-[#5D2126] mb-2">Auditório Principal da Faculdade CET</h3>
                   <p className="text-[#593234] leading-relaxed">
-                    Rua Professora Julieta Neiva Nunes, 5909-5881<br />
-                    Uruguai, Teresina - PI, 64073-500
+                    Rua Rio Grande do Norte, 790, Pirajá.<br />
+                    CEP: 64003-420 - Teresina, Piauí
                   </p>
                 </div>
               </div>
@@ -81,7 +81,7 @@ export default function Location() {
 
             {/* Map Button */}
             <motion.a
-              href="https://www.google.com/maps/search/Auditório+Ipê+Uninovafapi+Teresina"
+              href="https://maps.app.goo.gl/ddfp8uLcvd6vDuyQA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#5D2126] text-[#F9F4F5] font-bold rounded-lg transition-all duration-300 hover:bg-[#7D4E50] hover:shadow-lg"
@@ -144,7 +144,7 @@ export default function Location() {
             transition={{ duration: 0.3 }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.2174386845018!2d-42.74976642501842!3d-5.068474394908314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78e3a57d18df559%3A0x712a58925d6b5e6b!2sAudit%C3%B3rio%20Ip%C3%AA%20Uninovafapi!5e0!3m2!1spt-BR!2sbr!4v1768401999160!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.1611024668987!2d-42.82754832501829!3d-5.077623494899185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78e39cc84e2b6e7%3A0xe6f248e48e730fe1!2sUNI-CET!5e0!3m2!1spt-BR!2sbr!4v1768594714014!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               className="w-full h-full"

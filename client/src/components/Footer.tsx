@@ -46,14 +46,14 @@ export default function Footer() {
               <h4 className="font-bold text-lg">Localização</h4>
             </div>
             <p className="text-[#D4B5B7] leading-relaxed">
-              Auditório Ipê da Uninovafapi
+              Auditório Principal da Faculdade CET
             </p>
             <p className="text-[#D4B5B7] text-sm leading-relaxed">
-              Rua Professora Julieta Neiva Nunes, 5909-5881<br />
-              Uruguai, Teresina - PI, 64073-500
+              Rua Rio Grande do Norte, 790, Pirajá.<br />
+              CEP: 64002-150 - Teresina, Piauí
             </p>
             <motion.a
-              href="https://maps.google.com"
+              href="https://maps.app.goo.gl/ddfp8uLcvd6vDuyQA"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#BC989A] hover:text-[#D4B5B7] transition-colors duration-200 font-semibold text-sm mt-1 inline-block"

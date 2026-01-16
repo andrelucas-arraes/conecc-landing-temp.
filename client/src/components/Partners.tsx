@@ -151,7 +151,7 @@ export default function Partners() {
                                             src={sponsor.logo}
                                             alt={`${sponsor.name} - Patrocinador`}
                                             loading="lazy"
-                                            className="w-full h-full object-cover rounded-lg"
+                                            className="w-full h-full object-contain md:object-cover rounded-lg"
                                         />
                                     </motion.a>
                                 ))}

@@ -34,14 +34,6 @@ const ticketBatches: TicketBatch[] = [
     highlighted: true,
   },
   {
-    name: 'LOTE ESPECIAL',
-    subtitle: '(FIES, FIES SOCIAL, PROUNI)',
-    vacancies: '',
-    totalVacancies: 15,
-    remainingVacancies: 3,
-    categories: [{ category: 'Estudantes', price: 'R$ 120,00' }],
-  },
-  {
     name: '1º LOTE',
     vacancies: '',
     totalVacancies: 50,

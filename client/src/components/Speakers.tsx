@@ -6,14 +6,14 @@ import { Trophy, Baby, Heart, Sparkles, Syringe, Brain, Ambulance } from 'lucide
 const featuredSpeakers = [
   {
     name: 'Dr. Eric Rulli - Médico na Prática',
-    title: 'Médico e Consultor Empresarial',
-    bio: 'Formado em Direito (USP) e Medicina (UNICAMP). Presidente da Comissão Nacional do Médico Jovem (AMB) e Conselheiro Fiscal do AgSUS. Atuou como concursado pelo TJ-SP por 12 anos. Criador do Método Médico na Prática.',
+    title: 'Cirurgião Oncológico - Criador do Médico na Prática',
+    bio: 'Formado pela UFMS com residência em Cirurgia Oncológica. Pós-graduado em cirurgia minimamente invasiva (Inst. Jacques Perissat). Chefe da Residência em Cirurgia Oncológica do HCan-CG (2014-2019).',
     image: 'https://i.ibb.co/1G2vnBvf/DIA-02-0008-MEDICO-NA-PRATICA-16.jpg'
   },
   {
     name: 'Dr. Zeus Tristão',
-    title: 'Cirurgião Oncológico - Criador do Médico na Prática',
-    bio: 'Formado pela UFMS com residência em Cirurgia Oncológica. Pós-graduado em cirurgia minimamente invasiva (Inst. Jacques Perissat). Chefe da Residência em Cirurgia Oncológica do HCan-CG (2014-2019).',
+    title: 'Médico e Consultor Empresarial',
+    bio: 'Formado em Direito (USP) e Medicina (UNICAMP). Presidente da Comissão Nacional do Médico Jovem (AMB) e Conselheiro Fiscal do AgSUS. Atuou como concursado pelo TJ-SP por 12 anos. Criador do Método Médico na Prática.',
     image: 'https://i.ibb.co/ym0Xy1F4/Whats-App-Image-2026-01-14-at-12-17-18-AM.jpg'
   },
 ];
@@ -94,28 +94,28 @@ const modules = [
     color: '#C41E3A',
     speakers: [
       {
-        name: 'Dr. Francisco Jr',
+        name: 'Dr. Francisco Junior',
         title: 'Cardiologista',
-        bio: 'Especialista em Cardiologia com vasta experiência clínica e hospitalar.',
-        image: '/images/speaker-default.jpg'
+        bio: 'Residência em Clínica Médica e Cardiologia pelo HU- UFPI, Pós-Graduação lato sensu em Cardio-Oncologia, Professor de Medicina da UniFacid, Coordenador do Pronto Atendimento do HSM, CEO da empresa de Tecnologia na Saúde e Educação.',
+        image: 'https://i.ibb.co/j9Nt96SV/Whats-App-Image-2026-01-16-at-5-32-28-PM.jpg'
       },
       {
         name: 'Dra. Vitória Ximendes',
         title: 'Cardiologista',
-        bio: 'Especialista em Cardiologia com foco em saúde cardiovascular feminina.',
-        image: '/images/speaker-default.jpg'
+        bio: 'Residência Médica em Cardiologia pelo HU-UFBA, Especialista em Cardiologia e Ecocardiografia pela SBC/ DIC, Cardiologista do HUT, Cardiologista da Linha de Cuidado do Infarto Agudo do Miocárdio do Piauí- MEDSAFE',
+        image: 'https://i.ibb.co/C3D3vMSL/Whats-App-Image-2026-01-16-at-5-37-34-PM.jpg'
       },
       {
-        name: 'Dr. Thiago',
-        title: 'Cardiologista',
-        bio: 'Especialista em Cardiologia com atuação em procedimentos intervencionistas.',
-        image: '/images/speaker-default.jpg'
+        name: 'Dr. Thiago Nunes',
+        title: 'Cardiologista e Ecocardiografista',
+        bio: 'Doutor em Cardiologia pela USP, Cardiologista e Ecocardiografista pelo InCor - FMUSP, Preceptor da Residência de Cardiologia do HU UFPI, Professor da Unifacid',
+        image: 'https://i.ibb.co/fGStCC1z/Whats-App-Image-2026-01-16-at-5-27-56-PM.jpg'
       },
       {
-        name: 'Dr. Antonio Luiz',
-        title: 'Cardiologista',
-        bio: 'Especialista em Cardiologia com experiência em medicina intensiva.',
-        image: '/images/speaker-default.jpg'
+        name: 'NOME NOME',
+        title: 'NOME NOME',
+        bio: 'NOME NOME',
+        image: ''
       },
     ]
   },
@@ -208,7 +208,7 @@ const modules = [
       {
         name: 'Dr. Eduardo dos Santos Sousa',
         title: 'Neurologista',
-        bio: 'Mestre pela USP-RP. Neurointervencionista e Preceptor da Residência do HGV. Atua como Neurocirurgião no Hospital de Urgências de Teresina (HUT).',
+        bio: 'Graduado pela UFMA, residência pela Santa Casa de Misericórdia de SP, fellowship em Neurologia Vascular, Neurointensivismo e Doppler Transcraniano pela UNIFESP.',
         image: 'https://i.ibb.co/pvvhw8rz/Whats-App-Image-2026-01-14-at-9-51-48-PM.jpg'
       },
       {

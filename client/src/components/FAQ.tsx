@@ -22,7 +22,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: 'Há estacionamento disponível?',
-    answer: 'Sim, o Auditório Ipê da Uninovafapi possui estacionamento próprio com capacidade para centenas de veículos, totalmente gratuito para participantes.',
+    answer: 'Sim, o Auditório Principal da Faculdade CET possui estacionamento próprio com capacidade para centenas de veículos, totalmente gratuito para participantes.',
   },
   {
     question: 'Posso cancelar minha inscrição?',

@@ -144,7 +144,7 @@ export default function Hero() {
         }}
         aria-hidden="true"
       ></div>
-      
+
       {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"
@@ -160,13 +160,13 @@ export default function Hero() {
             eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
             location: {
               '@type': 'Place',
-              name: 'Auditório Ipê da Uninovafapi',
+              name: 'Auditório Principal da Faculdade CET',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'Rua Professora Julieta Neiva Nunes, 5909-5881',
+                streetAddress: 'Rua Rio Grande do Norte, 790, Pirajá.',
                 addressLocality: 'Teresina',
                 addressRegion: 'PI',
-                postalCode: '64073-500',
+                postalCode: '64003-420',
                 addressCountry: 'BR',
               },
             },

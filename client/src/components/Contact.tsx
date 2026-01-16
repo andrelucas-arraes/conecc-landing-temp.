@@ -155,10 +155,9 @@ export default function Contact() {
               <div>
                 <h3 className="text-xl font-bold text-[#5D2126] mb-2">Localização</h3>
                 <p className="text-[#593234]">
-                  Auditório Ipê da Uninovafapi<br />
-                  Rua Professora Julieta Neiva Nunes, 5909-5881<br />
-                  Uruguai, CEP: 64073-500<br />
-                  Teresina, Piauí
+                  Auditório Principal da Faculdade CET<br />
+                  Rua Rio Grande do Norte, 790, Pirajá.<br />
+                  CEP: 64003-420 - Teresina, Piauí
                 </p>
               </div>
             </motion.div>
