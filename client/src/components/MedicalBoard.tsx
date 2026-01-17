@@ -135,7 +135,7 @@ export default function MedicalBoard() {
                                     </h3>
 
                                     {/* Bio */}
-                                    <p className="text-[9px] md:text-sm text-[#593234] leading-relaxed line-clamp-3 md:line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
+                                    <p className="text-[9px] md:text-sm text-[#593234] leading-relaxed md:line-clamp-4 md:group-hover:line-clamp-none transition-all duration-300">
                                         {director.bio}
                                     </p>
                                 </div>

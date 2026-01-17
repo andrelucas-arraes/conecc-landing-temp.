@@ -201,19 +201,15 @@ export default function OrganizingCommittee() {
                     {/* Cards Container */}
                     <div className="overflow-hidden mx-6 md:mx-0" ref={containerRef}>
                         <motion.div
-                            className="flex"
+                            className="flex will-change-transform"
                             animate={{
                                 x: `-${currentIndex * 100}%`,
                             }}
-                            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                            transition={{ type: 'tween', duration: 0.4, ease: 'easeOut' }}
                         >
                             {committeeMembers.map((member, index) => (
-                                <motion.div
+                                <div
                                     key={index}
-                                    variants={cardVariants}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true, amount: 0.1 }}
                                     className="flex-shrink-0 px-1 md:px-2"
                                     style={{
                                         width: `${100 / cardsPerView}%`,
@@ -228,7 +224,7 @@ export default function OrganizingCommittee() {
                                             <img
                                                 src={member.image}
                                                 alt={member.name}
-                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                                className="w-full h-full object-cover md:transition-transform md:duration-500 md:group-hover:scale-105"
                                                 onError={(e) => {
                                                     (e.target as HTMLImageElement).src = '/images/speaker-default.jpg';
                                                 }}
@@ -248,7 +244,7 @@ export default function OrganizingCommittee() {
                                         {/* Decorative Border */}
                                         <div className="absolute top-3 left-3 right-3 bottom-3 border-2 border-white/20 rounded-xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
-                                </motion.div>
+                                </div>
                             ))}
                         </motion.div>
                     </div>
