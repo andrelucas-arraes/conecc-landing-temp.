@@ -32,6 +32,8 @@
 - [Estrutura de Pastas](#-estrutura-de-pastas)
 - [Contribuição](#-contribuição)
 - [Contato](#-contato)
+- [Licença](#-licença)
+- [Desenvolvedores](#-desenvolvedores)
 
 ---
 
@@ -54,7 +56,7 @@ Esta landing page foi desenvolvida para apresentar todas as informações do eve
 
 ## 🖼️ Preview do Projeto
 
-> A landing page conta com 12 seções principais, todas responsivas e otimizadas para todos os dispositivos.
+> A landing page conta com **14 seções principais**, todas responsivas e otimizadas para todos os dispositivos.
 
 ### Seções da Página
 
@@ -68,8 +70,10 @@ Esta landing page foi desenvolvida para apresentar todas as informações do eve
 8. **📍 Localização** - Mapa e informações do local
 9. **🤝 Parceiros** - Patrocinadores e apoiadores do evento
 10. **🏛️ Apoio Institucional** - Instituições parceiras
-11. **❓ FAQ** - Perguntas frequentes
-12. **📧 Contato** - Formulário e informações de contato
+11. **👥 Comissão Organizadora** - Membros da organização do evento
+12. **🩺 Diretoria Médica** - Equipe médica responsável
+13. **❓ FAQ** - Perguntas frequentes
+14. **📧 Contato** - Formulário e informações de contato
 
 ---
 
@@ -303,6 +307,8 @@ Localizados em `client/src/components/`:
 | **Map** | `Map.tsx` | Componente de mapa |
 | **Partners** | `Partners.tsx` | Logos de parceiros |
 | **InstitutionalSupport** | `InstitutionalSupport.tsx` | Apoio institucional |
+| **OrganizingCommittee** | `OrganizingCommittee.tsx` | Comissão organizadora do evento |
+| **MedicalBoard** | `MedicalBoard.tsx` | Diretoria médica responsável |
 | **FAQ** | `FAQ.tsx` | Perguntas frequentes (accordion) |
 | **Contact** | `Contact.tsx` | Formulário de contato |
 | **Footer** | `Footer.tsx` | Rodapé com links |
@@ -482,6 +488,8 @@ conecc-landing/
 │       │   ├── InstitutionalSupport.tsx
 │       │   ├── Location.tsx
 │       │   ├── Map.tsx
+│       │   ├── MedicalBoard.tsx
+│       │   ├── OrganizingCommittee.tsx
 │       │   ├── Partners.tsx
 │       │   ├── PracticalCourses.tsx
 │       │   ├── Schedule.tsx
@@ -600,6 +608,19 @@ Seguimos o padrão [Conventional Commits](https://www.conventionalcommits.org/):
 ## 📄 Licença
 
 Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 👨‍💻 Desenvolvedores
+
+<div align="center">
+
+| | Desenvolvedor | GitHub |
+|:---:|:---:|:---:|
+| 💻 | **André Arraes** | [@andrelucas-arraes](https://github.com/andrelucas-arraes) |
+| 💻 | **Gabriel Lucas** | [@gabrieelsilva](https://github.com/gabrieelsilva) |
+
+</div>
 
 ---
 

@@ -19,10 +19,13 @@ export default function Header() {
   const navItems = [
     { label: 'Sobre', href: '#sobre' },
     { label: 'Palestrantes', href: '#palestrantes' },
+    { label: 'Comissão', href: '#comissao' },
+    { label: 'Diretoria', href: '#diretoria' },
     { label: 'Cursos Práticos', href: '#cursos' },
     { label: 'Programação', href: '#programacao' },
     { label: 'Edital', href: '#edital' },
     { label: 'Ingressos', href: '#ingressos' },
+    { label: 'Parceiros', href: '#parceiros' },
     { label: 'Contato', href: '#contato' },
   ];
 

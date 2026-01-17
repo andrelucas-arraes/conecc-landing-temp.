@@ -101,12 +101,12 @@ export default function MedicalBoard() {
                             variants={cardVariants}
                             className="group"
                         >
-                            <div className="relative bg-[#F9F4F5] rounded-xl md:rounded-2xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-3">
+                            <div className="relative h-full flex flex-col bg-[#F9F4F5] rounded-xl md:rounded-2xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-3">
                                 {/* Top Accent Bar */}
                                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#BC989A] via-[#5D2126] to-[#BC989A]"></div>
 
                                 {/* Image Container */}
-                                <div className="relative overflow-hidden">
+                                <div className="relative overflow-hidden flex-shrink-0">
                                     <div className="aspect-[4/3] md:aspect-square">
                                         <img
                                             src={director.image}
@@ -123,9 +123,9 @@ export default function MedicalBoard() {
                                 </div>
 
                                 {/* Content */}
-                                <div className="p-3 md:p-6">
+                                <div className="p-3 md:p-6 flex flex-col flex-1">
                                     {/* Role Badge */}
-                                    <div className="inline-block mb-1.5 md:mb-3 px-2 md:px-3 py-0.5 md:py-1 bg-[#5D2126]/10 text-[#5D2126] text-[8px] md:text-xs font-bold tracking-wider rounded-full uppercase">
+                                    <div className="inline-block mb-1.5 md:mb-3 px-2 md:px-3 py-0.5 md:py-1 bg-[#5D2126]/10 text-[#5D2126] text-[8px] md:text-xs font-bold tracking-wider rounded-full uppercase self-start">
                                         {director.role}
                                     </div>
 
@@ -135,7 +135,7 @@ export default function MedicalBoard() {
                                     </h3>
 
                                     {/* Bio */}
-                                    <p className="text-[9px] md:text-sm text-[#593234] leading-relaxed md:line-clamp-4 md:group-hover:line-clamp-none transition-all duration-300">
+                                    <p className="text-[9px] md:text-sm text-[#593234] leading-relaxed md:line-clamp-4 md:group-hover:line-clamp-none transition-all duration-300 flex-1">
                                         {director.bio}
                                     </p>
                                 </div>

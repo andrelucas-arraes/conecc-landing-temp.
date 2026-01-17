@@ -76,7 +76,7 @@ export default function InstitutionalSupport() {
                             variants={gridVariants}
                         >
                             {/* Support Grid */}
-                            <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto" variants={gridVariants}>
+                            <motion.div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto" variants={gridVariants}>
                                 {tier.supporters.map((supporter, index) => (
                                     <motion.a
                                         key={index}

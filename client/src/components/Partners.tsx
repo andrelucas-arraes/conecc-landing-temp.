@@ -105,7 +105,7 @@ export default function Partners() {
             <div className="container mx-auto px-4">
                 {/* Section Header */}
                 <motion.div
-                    className="max-w-3xl mx-auto mb-16 text-center"
+                    className="max-w-3xl mx-auto mb-8 md:mb-16 text-center"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
@@ -273,7 +273,7 @@ export default function Partners() {
                             Instituições que apoiam e contribuem para o sucesso do I CONECC.
                         </p>
                         <motion.div
-                            className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto"
+                            className="grid grid-cols-2 justify-items-center gap-2 max-w-xs mx-auto sm:flex sm:flex-wrap justify-center sm:gap-4 sm:max-w-5xl"
                             variants={gridVariants}
                         >
                             {institutionalSupport.map((support, index) => (

@@ -128,7 +128,7 @@ export default function Footer() {
           <p className="text-[#A67B7D] text-xs mt-2">
             I Congresso de Especialidades Clínicas e Cirúrgicas
           </p>
-          <p className="text-[#7D4E50] text-xs mt-4 opacity-70">
+          <p className="text-[#A67B7D] text-xs mt-4">
             Desenvolvido por{' '}
             <motion.a
               href="https://github.com/andrearraesDev"
@@ -137,7 +137,7 @@ export default function Footer() {
               className="text-[#A67B7D] hover:text-[#BC989A] transition-colors duration-200"
               whileHover={{ scale: 1.05 }}
             >
-              André Arraes
+              <strong>André Arraes</strong>
             </motion.a>
             {' e '}
             <motion.a
@@ -147,7 +147,7 @@ export default function Footer() {
               className="text-[#A67B7D] hover:text-[#BC989A] transition-colors duration-200"
               whileHover={{ scale: 1.05 }}
             >
-              Gabriel Lucas
+              <strong>Gabriel Lucas</strong>
             </motion.a>
           </p>
         </motion.div>

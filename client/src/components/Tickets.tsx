@@ -184,7 +184,7 @@ export default function Tickets() {
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-1">
                     <p
-                      className={`text-2xl font-bold ${batch.highlighted ? 'text-[#F9F4F5]' : 'text-[#5D2126]'
+                      className={`text-base md:text-2xl font-bold whitespace-nowrap ${batch.highlighted ? 'text-[#F9F4F5]' : 'text-[#5D2126]'
                         }`}
                     >
                       {batch.name}
@@ -244,15 +244,15 @@ export default function Tickets() {
                       {batch.categories.map((cat, catIdx) => (
                         <motion.div
                           key={catIdx}
-                          className="flex items-center justify-between p-4 bg-[#F9F4F5] rounded-lg border-l-2 border-[#BC989A]"
+                          className="flex flex-nowrap items-center justify-between p-3 md:p-4 bg-[#F9F4F5] rounded-lg border-l-2 border-[#BC989A] gap-2"
                           variants={categoryItemVariants}
                           whileHover={{ x: 5, backgroundColor: '#ECD5D7' }}
                         >
-                          <div className="flex items-center gap-3">
-                            <Check className="w-5 h-5 text-[#BC989A] shrink-0" />
-                            <span className="font-semibold text-[#593234]">{cat.category}</span>
+                          <div className="flex items-center gap-2 md:gap-3 min-w-0">
+                            <Check className="w-4 h-4 md:w-5 md:h-5 text-[#BC989A] shrink-0" />
+                            <span className="font-semibold text-[#593234] text-sm md:text-base truncate">{cat.category}</span>
                           </div>
-                          <span className="text-xl font-bold text-[#5D2126]">{cat.price}</span>
+                          <span className="text-base md:text-xl font-bold text-[#5D2126] whitespace-nowrap shrink-0">{cat.price}</span>
                         </motion.div>
                       ))}
 
