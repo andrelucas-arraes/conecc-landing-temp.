@@ -186,7 +186,8 @@ export default function Contact() {
 
           {/* Contact Form */}
           <motion.div
-            className="p-8 bg-white rounded-lg shadow-lg order-1 lg:order-2"
+            className="pt-4 pb-8 px-8 bg-white rounded-lg order-1 lg:order-2"
+            style={{ boxShadow: '0 -8px 15px -5px rgba(0, 0, 0, 0.05), 0 8px 15px -5px rgba(0, 0, 0, 0.05)' }}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}

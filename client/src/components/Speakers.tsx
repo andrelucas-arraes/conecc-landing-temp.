@@ -13,7 +13,7 @@ const featuredSpeakers = [
   {
     name: 'Dr. Zeus Tristão',
     title: 'Médico e Consultor Empresarial',
-    bio: 'Formado em Direito (USP) e Medicina (UNICAMP). Presidente da Comissão Nacional do Médico Jovem (AMB) e Conselheiro Fiscal do AgSUS. Atuou como concursado pelo TJ-SP por 12 anos. Criador do Método Médico na Prática.',
+    bio: 'Formado em Direito pela Universidade de São Paulo (USP) em 2014, é também graduado em Medicina pela Universidade Estadual de Campinas (UNICAMP), com conclusão em 2022. Atua como Presidente da Comissão Nacional do Médico Jovem da Associação Médica Brasileira, além de exercer o cargo de Conselheiro Fiscal do AgSUS. Possui trajetória no serviço público, tendo sido concursado pelo Tribunal de Justiça do Estado de São Paulo no período de 2013 a 2025. Atualmente, atua como consultor médico empresarial.',
     image: 'https://i.ibb.co/ym0Xy1F4/Whats-App-Image-2026-01-14-at-12-17-18-AM.jpg'
   },
 ];
@@ -54,7 +54,7 @@ const modules = [
   {
     name: 'Módulo GO',
     icon: Baby,
-    color: '#8B5E3C',
+    color: '#5D2126',
     speakers: [
       {
         name: 'Dra. Luciana Monteiro',
@@ -91,7 +91,7 @@ const modules = [
   {
     name: 'Módulo Cardiologia',
     icon: Heart,
-    color: '#C41E3A',
+    color: '#5D2126',
     speakers: [
       {
         name: 'Dr. Francisco Junior',
@@ -122,7 +122,7 @@ const modules = [
   {
     name: 'Módulo Dermatologia',
     icon: Sparkles,
-    color: '#D4A574',
+    color: '#5D2126',
     speakers: [
       {
         name: 'Dra. Ana Zanatta',
@@ -141,7 +141,7 @@ const modules = [
   {
     name: 'Módulo Cirurgia Plástica',
     icon: Syringe,
-    color: '#9B59B6',
+    color: '#5D2126',
     speakers: [
       {
         name: 'Dr. Edson Neto',
@@ -160,7 +160,7 @@ const modules = [
   {
     name: 'Módulo Psiquiatria',
     icon: Brain,
-    color: '#3498DB',
+    color: '#5D2126',
     speakers: [
       {
         name: 'Dr. Leonardo Sérvio Luz',
@@ -197,7 +197,7 @@ const modules = [
   {
     name: 'Módulo de Emergência',
     icon: Ambulance,
-    color: '#E74C3C',
+    color: '#5D2126',
     speakers: [
       {
         name: 'Dr. Nagele Lima',
