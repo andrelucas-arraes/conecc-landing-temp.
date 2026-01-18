@@ -2,32 +2,30 @@ import { motion } from 'framer-motion';
 import { Stethoscope } from 'lucide-react';
 
 // Dados da Diretoria Médica (4 médicos)
-const placeholderImage = 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg';
-
 const medicalDirectors = [
     {
-        name: 'Dr. Paulo Roberto Silva',
-        role: 'Diretor Presidente',
-        bio: 'Cardiologista com mais de 25 anos de experiência. Formado pela USP com especialização no InCor. Professor titular de Cardiologia e membro da Academia Nacional de Medicina. Pioneiro em técnicas de intervenção minimamente invasiva no Nordeste.',
-        image: placeholderImage
+        name: 'Dr. Atêncio Queiroga',
+        role: 'Presidente Médico',
+        bio: 'Bio Bio Bio',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dra. Maria Helena Costa',
-        role: 'Diretora Científica',
-        bio: 'Oncologista clínica com doutorado pela UNICAMP. Coordenadora do programa de pesquisa em imunoterapia do Hospital São Marcos. Autora de mais de 100 artigos científicos e consultora da OMS para protocolos oncológicos.',
-        image: placeholderImage
+        name: 'Dr. Jocerlano Sousa',
+        role: 'Vice-Presidente',
+        bio: 'Bio Bio Bio',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dr. Antonio Carlos Neto',
-        role: 'Diretor Administrativo',
-        bio: 'Cirurgião geral com MBA em Gestão em Saúde pela FGV. Ex-diretor técnico do Hospital Getúlio Vargas e atual presidente da Associação Médica do Piauí. Especialista em gestão hospitalar e qualidade em serviços de saúde.',
-        image: placeholderImage
+        name: 'Dr. Rogério Medeiros',
+        role: 'Diretor Científico',
+        bio: 'Bio Bio Bio',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dra. Luciana Fernandes',
-        role: 'Diretora de Ensino',
-        bio: 'Pediatra e professora da UFPI há 18 anos. Mestre e Doutora em Medicina pela FMUSP. Coordenadora do programa de residência médica e responsável pela formação de mais de 500 médicos residentes na região.',
-        image: placeholderImage
+        name: 'Dr. Williams Cardec',
+        role: 'Diretor de Cursos Práticos',
+        bio: 'Bio Bio Bio',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     }
 ];
 

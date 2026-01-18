@@ -5,7 +5,7 @@ export default function About() {
   const highlights = [
     {
       icon: Users,
-      title: 'Palestrantes de Renomados',
+      title: 'Palestrantes Renomados',
       description:
         'Presença de professores, pesquisadores e líderes nacionais e internacionais, trazendo conteúdo atualizado e discussões de alto nível em diversas áreas da medicina.',
     },

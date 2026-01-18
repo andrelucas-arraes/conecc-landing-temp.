@@ -13,7 +13,7 @@ const featuredSpeakers = [
   {
     name: 'Dr. Zeus Tristão',
     title: 'Médico e Consultor Empresarial',
-    bio: 'Formado em Direito pela Universidade de São Paulo (USP) em 2014, é também graduado em Medicina pela Universidade Estadual de Campinas (UNICAMP), com conclusão em 2022. Atua como Presidente da Comissão Nacional do Médico Jovem da Associação Médica Brasileira, além de exercer o cargo de Conselheiro Fiscal do AgSUS. Possui trajetória no serviço público, tendo sido concursado pelo Tribunal de Justiça do Estado de São Paulo no período de 2013 a 2025. Atualmente, atua como consultor médico empresarial.',
+    bio: 'Formado em Direito pela Universidade de São Paulo (USP) em 2014, é também graduado em Medicina pela Universidade Estadual de Campinas (UNICAMP), com conclusão em 2022. Atua como Presidente da Comissão Nacional do Médico Jovem da Associação Médica Brasileira, além de exercer o cargo de Conselheiro Fiscal do AgSUS. Possui trajetória no serviço público, tendo sido concursado pelo Tribunal de Justiça do Estado de São Paulo no período de 2013 a 2025. Atualmenteatua como consultor médico empresarial.',
     image: 'https://i.ibb.co/ym0Xy1F4/Whats-App-Image-2026-01-14-at-12-17-18-AM.jpg'
   },
 ];
@@ -288,7 +288,7 @@ export default function Speakers() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#5D2126] mb-4 md:mb-6">Palestrantes</h2>
           <div className="w-12 md:w-16 h-1 bg-[#BC989A] mb-4 md:mb-8 mx-auto"></div>
           <p className="text-sm md:text-lg text-[#593234] px-2">
-            Conheça os renomados profissionais que estarão no CONECC 2026, compartilhando experiência e perspectivas que inspiram o futuro da medicina.
+            Conheça os renomados profissionais que estarão no CONECC 2026, compartilhando experiências e perspectivas que inspiram o futuro da medicina.
           </p>
         </motion.div>
 

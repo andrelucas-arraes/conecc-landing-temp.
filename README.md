@@ -289,55 +289,84 @@ pnpm format
 
 ## 🧩 Componentes
 
-### Componentes de Página
+Os componentes estão organizados em uma estrutura modular dentro de `client/src/components/`:
 
-Localizados em `client/src/components/`:
+### 📁 Estrutura de Componentes
 
-| Componente | Arquivo | Descrição |
-|------------|---------|-----------|
-| **Header** | `Header.tsx` | Navegação fixa com menu responsivo |
-| **Hero** | `Hero.tsx` | Banner principal do evento |
-| **About** | `About.tsx` | Seção sobre o congresso |
-| **Speakers** | `Speakers.tsx` | Grid de palestrantes por módulo |
-| **PracticalCourses** | `PracticalCourses.tsx` | Cursos práticos disponíveis |
-| **Schedule** | `Schedule.tsx` | Programação completa por dia |
-| **Tickets** | `Tickets.tsx` | Cards de preços e lotes |
-| **Edital** | `Edital.tsx` | Submissão de trabalhos |
-| **Location** | `Location.tsx` | Informações de local |
-| **Map** | `Map.tsx` | Componente de mapa |
-| **Partners** | `Partners.tsx` | Logos de parceiros |
-| **InstitutionalSupport** | `InstitutionalSupport.tsx` | Apoio institucional |
-| **OrganizingCommittee** | `OrganizingCommittee.tsx` | Comissão organizadora do evento |
-| **MedicalBoard** | `MedicalBoard.tsx` | Diretoria médica responsável |
-| **FAQ** | `FAQ.tsx` | Perguntas frequentes (accordion) |
-| **Contact** | `Contact.tsx` | Formulário de contato |
-| **Footer** | `Footer.tsx` | Rodapé com links |
-| **ScrollToTop** | `ScrollToTop.tsx` | Botão voltar ao topo |
-| **ErrorBoundary** | `ErrorBoundary.tsx` | Tratamento de erros React |
+```
+components/
+├── 📁 sections/    # Seções principais da landing page
+├── 📁 layout/      # Componentes de layout (Header, Footer)
+├── 📁 common/      # Componentes reutilizáveis
+└── 📁 ui/          # Componentes UI base (shadcn/ui)
+```
 
-### Componentes UI Base
+### 🔲 Seções (`sections/`)
 
-Localizados em `client/src/components/ui/`, seguindo padrões do shadcn/ui:
+Cada seção representa uma parte distinta da landing page:
 
-- Accordion, Alert, Avatar, Button, Card, Dialog, Input, Label, Select, Tabs, Tooltip, e muitos outros...
+| Componente | Descrição |
+|------------|-----------|
+| **Hero** | Banner principal com apresentação do evento |
+| **About** | Seção sobre o congresso |
+| **Speakers** | Grid de palestrantes por módulo/especialidade |
+| **PracticalCourses** | Cursos práticos hands-on disponíveis |
+| **Schedule** | Programação completa por dia |
+| **Tickets** | Cards de preços e lotes |
+| **Edital** | Informações de submissão de trabalhos |
+| **Location** | Informações e mapa do local |
+| **Partners** | Logos de patrocinadores e apoiadores |
+| **InstitutionalSupport** | Instituições parceiras |
+| **OrganizingCommittee** | Membros da comissão organizadora |
+| **MedicalBoard** | Equipe da diretoria médica |
+| **FAQ** | Perguntas frequentes (accordion) |
+| **Contact** | Formulário e informações de contato |
 
-### Custom Hooks
+### 🏗️ Layout (`layout/`)
+
+Componentes estruturais da página:
+
+| Componente | Descrição |
+|------------|-----------|
+| **Header** | Navegação fixa com menu responsivo (desktop e mobile) |
+| **Footer** | Rodapé com links, redes sociais e créditos |
+
+### 🔧 Common (`common/`)
+
+Componentes reutilizáveis em múltiplas seções:
+
+| Componente | Descrição |
+|------------|-----------|
+| **Map** | Componente de mapa integrado com localização |
+| **ScrollToTop** | Botão flutuante para voltar ao topo |
+| **ErrorBoundary** | Tratamento de erros React |
+
+### 🎨 UI (`ui/`)
+
+Componentes base seguindo padrões do [shadcn/ui](https://ui.shadcn.com):
+
+- Accordion, Alert, Avatar, Badge, Button, Card
+- Dialog, Dropdown, Input, Label, Select
+- Tabs, Textarea, Toast, Tooltip
+- E muitos outros...
+
+### 🪝 Custom Hooks
 
 Localizados em `client/src/hooks/`:
 
-| Hook | Arquivo | Descrição |
-|------|---------|-----------|
-| **useMobile** | `useMobile.tsx` | Detecta viewport mobile |
-| **useComposition** | `useComposition.ts` | Gerencia composição de estados |
-| **usePersistFn** | `usePersistFn.ts` | Persiste funções entre renders |
+| Hook | Descrição |
+|------|-----------|
+| **useMobile** | Detecta viewport mobile (< 768px) |
+| **useComposition** | Gerencia composição de estados |
+| **usePersistFn** | Persiste referência de funções entre renders |
 
-### Contextos
+### 🎭 Contextos
 
 Localizados em `client/src/contexts/`:
 
-| Contexto | Arquivo | Descrição |
-|----------|---------|-----------|
-| **ThemeContext** | `ThemeContext.tsx` | Gerenciamento de tema (light/dark) |
+| Contexto | Descrição |
+|----------|-----------|
+| **ThemeContext** | Gerenciamento de tema (light/dark) |
 
 ---
 
@@ -476,26 +505,40 @@ conecc-landing/
 │   │
 │   └── 📁 src/                   # Código-fonte
 │       ├── 📁 components/        # Componentes React
-│       │   ├── 📁 ui/            # Componentes UI base (shadcn)
-│       │   ├── About.tsx
-│       │   ├── Contact.tsx
-│       │   ├── Edital.tsx
-│       │   ├── ErrorBoundary.tsx
-│       │   ├── FAQ.tsx
-│       │   ├── Footer.tsx
-│       │   ├── Header.tsx
-│       │   ├── Hero.tsx
-│       │   ├── InstitutionalSupport.tsx
-│       │   ├── Location.tsx
-│       │   ├── Map.tsx
-│       │   ├── MedicalBoard.tsx
-│       │   ├── OrganizingCommittee.tsx
-│       │   ├── Partners.tsx
-│       │   ├── PracticalCourses.tsx
-│       │   ├── Schedule.tsx
-│       │   ├── ScrollToTop.tsx
-│       │   ├── Speakers.tsx
-│       │   └── Tickets.tsx
+│       │   │
+│       │   ├── 📁 sections/      # Seções da landing page
+│       │   │   ├── About.tsx
+│       │   │   ├── Contact.tsx
+│       │   │   ├── Edital.tsx
+│       │   │   ├── FAQ.tsx
+│       │   │   ├── Hero.tsx
+│       │   │   ├── InstitutionalSupport.tsx
+│       │   │   ├── Location.tsx
+│       │   │   ├── MedicalBoard.tsx
+│       │   │   ├── OrganizingCommittee.tsx
+│       │   │   ├── Partners.tsx
+│       │   │   ├── PracticalCourses.tsx
+│       │   │   ├── Schedule.tsx
+│       │   │   ├── Speakers.tsx
+│       │   │   ├── Tickets.tsx
+│       │   │   └── index.ts      # Barrel export
+│       │   │
+│       │   ├── 📁 layout/        # Componentes de layout
+│       │   │   ├── Header.tsx
+│       │   │   ├── Footer.tsx
+│       │   │   └── index.ts      # Barrel export
+│       │   │
+│       │   ├── 📁 common/        # Componentes reutilizáveis
+│       │   │   ├── ErrorBoundary.tsx
+│       │   │   ├── Map.tsx
+│       │   │   ├── ScrollToTop.tsx
+│       │   │   └── index.ts      # Barrel export
+│       │   │
+│       │   └── 📁 ui/            # Componentes UI (shadcn/ui)
+│       │       ├── accordion.tsx
+│       │       ├── button.tsx
+│       │       ├── card.tsx
+│       │       └── ... (50+ componentes)
 │       │
 │       ├── 📁 contexts/          # Contextos React
 │       │   └── ThemeContext.tsx  # Tema light/dark
@@ -527,10 +570,12 @@ conecc-landing/
 │   ├── public/                   # Frontend compilado
 │   └── index.js                  # Backend compilado
 │
+├── 📄 .gitignore                 # Arquivos ignorados pelo Git
 ├── 📄 .prettierrc                # Configuração Prettier
 ├── 📄 .prettierignore            # Ignorados pelo Prettier
 ├── 📄 components.json            # Configuração shadcn/ui
 ├── 📄 eslint.config.js           # Configuração ESLint
+├── 📄 LICENSE                    # Licença MIT
 ├── 📄 package.json               # Dependências e scripts
 ├── 📄 pnpm-lock.yaml             # Lock file do pnpm
 ├── 📄 tsconfig.json              # Configuração TypeScript

@@ -3,93 +3,91 @@ import { useState, useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Users } from 'lucide-react';
 
 // Dados da Comissão Organizadora (17 pessoas)
-const placeholderImage = 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg';
-
 const committeeMembers = [
     {
-        name: 'Dr. Ricardo Andrade',
-        role: 'Presidente da Comissão',
-        image: placeholderImage
+        name: 'Sabrina Dias',
+        role: 'Presidente',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dra. Mariana Costa',
-        role: 'Vice-Presidente',
-        image: placeholderImage
+        name: 'Maria Eduarda Cabral',
+        role: 'Vice Presidente',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dr. Felipe Santos',
-        role: 'Diretor Científico',
-        image: placeholderImage
+        name: 'Erika Custódio',
+        role: 'Diretora Geral',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dra. Juliana Lima',
-        role: 'Coordenadora Geral',
-        image: placeholderImage
+        name: 'Angella Moniely',
+        role: 'Diretora de Logística e Infraestrutura',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dr. Carlos Eduardo',
-        role: 'Diretor Financeiro',
-        image: placeholderImage
+        name: 'Alice Emanuelle',
+        role: 'Diretora de Logística e Infraestrutura',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dra. Beatriz Oliveira',
-        role: 'Coordenadora de Programação',
-        image: placeholderImage
+        name: 'Estéfane Portela',
+        role: 'Diretora de Marketing',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dr. Leonardo Martins',
-        role: 'Diretor de Comunicação',
-        image: placeholderImage
+        name: 'Habina Alencar',
+        role: 'Diretora de Patrocínio',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dra. Amanda Souza',
-        role: 'Coordenadora de Patrocínios',
-        image: placeholderImage
+        name: 'Sabrina Vitória',
+        role: 'Diretora de Cursos Práticos',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dr. Thiago Almeida',
-        role: 'Diretor de Logística',
-        image: placeholderImage
+        name: 'Maria Eveline',
+        role: 'Diretora de Cursos Práticos',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dra. Fernanda Rocha',
-        role: 'Coordenadora de Inscrições',
-        image: placeholderImage
+        name: 'Antônio Mourão',
+        role: 'Diretor de Administração',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dr. Gustavo Pereira',
-        role: 'Diretor de Eventos',
-        image: placeholderImage
+        name: 'Salma Clímaco',
+        role: 'Diretora de Programação Científica',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dra. Camila Nascimento',
-        role: 'Coordenadora de Cursos',
-        image: placeholderImage
+        name: 'George Torquato',
+        role: 'Diretor de Administração',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dr. Bruno Ferreira',
-        role: 'Diretor de Tecnologia',
-        image: placeholderImage
+        name: 'Lucas Teixeira',
+        role: 'Diretor de Marketing',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dra. Isabela Ramos',
-        role: 'Coordenadora Social',
-        image: placeholderImage
+        name: 'Carlos Rafael',
+        role: 'Diretor de Patrocínio',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dr. Matheus Cardoso',
-        role: 'Assessor Científico',
-        image: placeholderImage
+        name: 'Layane Coutinho',
+        role: 'Diretora de Trabalhos Científicos',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dra. Patricia Mendes',
-        role: 'Assessora de Imprensa',
-        image: placeholderImage
+        name: 'Wesley Brandolee',
+        role: 'Diretor de Programação Científica',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     },
     {
-        name: 'Dr. Rafael Barbosa',
-        role: 'Coordenador de Voluntários',
-        image: placeholderImage
+        name: 'Expedita Escórcio',
+        role: 'Diretora de Trabalhos Científicos',
+        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
     }
 ];
 
