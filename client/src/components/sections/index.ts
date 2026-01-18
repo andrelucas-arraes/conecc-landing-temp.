@@ -1,0 +1,14 @@
+export { default as Hero } from './Hero';
+export { default as About } from './About';
+export { default as Speakers } from './Speakers';
+export { default as OrganizingCommittee } from './OrganizingCommittee';
+export { default as MedicalBoard } from './MedicalBoard';
+export { default as PracticalCourses } from './PracticalCourses';
+export { default as Schedule } from './Schedule';
+export { default as Tickets } from './Tickets';
+export { default as Edital } from './Edital';
+export { default as Location } from './Location';
+export { default as Partners } from './Partners';
+export { default as FAQ } from './FAQ';
+export { default as Contact } from './Contact';
+export { default as InstitutionalSupport } from './InstitutionalSupport';

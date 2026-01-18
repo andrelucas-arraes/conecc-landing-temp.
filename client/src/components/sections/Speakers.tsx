@@ -115,7 +115,7 @@ const modules = [
         name: 'NOME NOME',
         title: 'NOME NOME',
         bio: 'NOME NOME',
-        image: ''
+        image: 'https://i.ibb.co/fGStCC1z/Whats-App-Image-2026-01-16-at-5-27-56-PM.jpg'
       },
     ]
   },
@@ -268,7 +268,7 @@ export default function Speakers() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-multiply"
         style={{
-          backgroundImage: 'url(/images/speakers_section.png)',
+          backgroundImage: 'url(/images/speakers_section.webp)',
         }}
       ></div>
 

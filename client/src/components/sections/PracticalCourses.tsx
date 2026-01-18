@@ -71,7 +71,7 @@ export default function PracticalCourses() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{
-          backgroundImage: 'url(/images/practical_courses.png)',
+          backgroundImage: 'url(/images/practical_courses.webp)',
         }}
       ></div>
 

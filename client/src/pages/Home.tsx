@@ -1,19 +1,19 @@
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Speakers from '@/components/Speakers';
-import OrganizingCommittee from '@/components/OrganizingCommittee';
-import MedicalBoard from '@/components/MedicalBoard';
-import PracticalCourses from '@/components/PracticalCourses';
-import Schedule from '@/components/Schedule';
-import Tickets from '@/components/Tickets';
-import Edital from '@/components/Edital';
-import Location from '@/components/Location';
-import Partners from '@/components/Partners';
-import FAQ from '@/components/FAQ';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
-import ScrollToTop from '@/components/ScrollToTop';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import Hero from '@/components/sections/Hero';
+import About from '@/components/sections/About';
+import Speakers from '@/components/sections/Speakers';
+import OrganizingCommittee from '@/components/sections/OrganizingCommittee';
+import MedicalBoard from '@/components/sections/MedicalBoard';
+import PracticalCourses from '@/components/sections/PracticalCourses';
+import Schedule from '@/components/sections/Schedule';
+import Tickets from '@/components/sections/Tickets';
+import Edital from '@/components/sections/Edital';
+import Location from '@/components/sections/Location';
+import Partners from '@/components/sections/Partners';
+import FAQ from '@/components/sections/FAQ';
+import Contact from '@/components/sections/Contact';
+import ScrollToTop from '@/components/common/ScrollToTop';
 
 
 export default function Home() {
