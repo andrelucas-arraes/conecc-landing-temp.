@@ -5,27 +5,27 @@ import { Stethoscope } from 'lucide-react';
 const medicalDirectors = [
     {
         name: 'Dr. Atêncio Queiroga',
-        role: 'Presidente Médico',
-        bio: 'Bio Bio Bio',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        role: 'Presidente',
+        bio: 'Médico Pediatra e Gestor Hospitalar. É Diretor Geral do Hospital Maternidade Buenos Aires, Presidente da AMB-PI e Conselheiro do CRM-PI. Possui vasta experiência como docente e preceptor em Pediatria.',
+        image: 'https://i.ibb.co/v4077sYX/Whats-App-Image-2026-01-18-at-5-13-42-PM.jpg'
     },
     {
         name: 'Dr. Jocerlano Sousa',
         role: 'Vice-Presidente',
-        bio: 'Bio Bio Bio',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        bio: 'Cirurgião Cardiovascular com residência pelo InCor-USP. Possui experiência internacional com observerships na Alemanha (Herzzentrum Leipzig) e EUA (Cleveland Clinic). Atua nos hospitais São Marcos, ItaCor e Unimed Primavera.',
+        image: 'https://i.ibb.co/N60kVCrp/Whats-App-Image-2026-01-18-at-5-18-32-PM.jpg'
     },
     {
         name: 'Dr. Rogério Medeiros',
         role: 'Diretor Científico',
-        bio: 'Bio Bio Bio',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        bio: 'Cirurgião Pediátrico e Geral, atual Diretor Técnico do HUT. Mestre em Saúde da Família e Doutorando em Engenharia Biomédica. Possui dupla graduação (Medicina e Enfermagem) e ampla vivência em gestão assistencial.',
+        image: 'https://i.ibb.co/k2Z02Y2v/Whats-App-Image-2026-01-18-at-5-17-19-PM.jpg'
     },
     {
         name: 'Dr. Williams Cardec',
         role: 'Diretor de Cursos Práticos',
-        bio: 'Bio Bio Bio',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        bio: 'Médico e Advogado com atuação em Direito Médico. Especialista em Clínica Médica, Emergência e Medicina do Trabalho. É Conselheiro do CFM e Vice-corregedor do CRM-PI. Mestre em Medicina e Doutorando em Saúde Baseada em Evidências.',
+        image: 'https://i.ibb.co/sdybfqmC/Whats-App-Image-2026-01-18-at-3-14-35-PM.jpg'
     }
 ];
 
