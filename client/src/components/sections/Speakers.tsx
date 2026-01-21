@@ -96,26 +96,26 @@ const modules = [
       {
         name: 'Dr. Francisco Junior',
         title: 'Cardiologista',
-        bio: 'Residência em Clínica Médica e Cardiologia pelo HU- UFPI, Pós-Graduação lato sensu em Cardio-Oncologia, Professor de Medicina da UniFacid, Coordenador do Pronto Atendimento do HSM, CEO da empresa de Tecnologia na Saúde e Educação.',
+        bio: 'Possui residência em Clínica Médica pelo Hospital Universitário da Universidade Federal do Piauí (HU-UFPI) e residência em Cardiologia pelo HU-UFPI, além de pós-graduação lato sensu em Cardio-Oncologia. Atua como médico cardiologista da Universidade Federal do Piauí (UFPI), é preceptor da Residência de Cardiologia da UFPI e professor do curso de Medicina da Unifacid. Exerce também a função de coordenador do Pronto Atendimento do Hospital São Paulo e é CEO de uma empresa de Tecnologia em Saúde e Educação- MedSafe.',
         image: 'https://i.ibb.co/j9Nt96SV/Whats-App-Image-2026-01-16-at-5-32-28-PM.jpg'
       },
       {
-        name: 'Dra. Vitória Ximendes',
+        name: 'Dra. Vitória Ximenes',
         title: 'Cardiologista',
-        bio: 'Residência Médica em Cardiologia pelo HU-UFBA, Especialista em Cardiologia e Ecocardiografia pela SBC/ DIC, Cardiologista do HUT, Cardiologista da Linha de Cuidado do Infarto Agudo do Miocárdio do Piauí- MEDSAFE',
+        bio: 'Especialista em Cardiologia e Ecocardiografia pela Sociedade Brasileira de Cardiologia (SBC) e pelo Departamento de Imagem Cardiovascular (DIC). Realizou Residência Médica em Cardiologia pelo Hospital Universitário da Universidade Federal da Bahia (HU-UFBA) e Residência Médica em Ecocardiografia pela Escola de Ecocardiografia da Bahia. Atua como cardiologista no Hospital Universitário HU-UFPI e no Hospital de Urgência de Teresina, além de integrar a Linha de Cuidado do Infarto Agudo do Miocárdio do Estado do Piauí (MEDSAFE).',
         image: 'https://i.ibb.co/C3D3vMSL/Whats-App-Image-2026-01-16-at-5-37-34-PM.jpg'
       },
       {
         name: 'Dr. Thiago Nunes',
         title: 'Cardiologista e Ecocardiografista',
-        bio: 'Doutor em Cardiologia pela USP, Cardiologista e Ecocardiografista pelo InCor - FMUSP, Preceptor da Residência de Cardiologia do HU UFPI, Professor da Unifacid',
+        bio: 'Doutor em Cardiologia pela Universidade de São Paulo (USP), cardiologista e ecocardiografista pelo Instituto do Coração (InCor) da Faculdade de Medicina da USP (FMUSP). Atua como chefe do setor de apoio diagnóstico e terapêutico do Hospital Universitário da Universidade Federal do Piauí (HU-UFPI), além de ser coordenador da Cardiologia e do pronto-socorro cardiológico do Hospital São Paulo. É preceptor da Residência de Cardiologia do HU-UFPI e professor da Unifacid.',
         image: 'https://i.ibb.co/fGStCC1z/Whats-App-Image-2026-01-16-at-5-27-56-PM.jpg'
       },
       {
-        name: 'NOME NOME',
-        title: 'NOME NOME',
-        bio: 'NOME NOME',
-        image: 'https://i.ibb.co/fGStCC1z/Whats-App-Image-2026-01-16-at-5-27-56-PM.jpg'
+        name: 'Dr. Jocerlano Sousa',
+        title: 'Cirurgião Cardiovascular',
+        bio: 'Médico formado pela UESPI, com residência médica em Cirurgia Geral pela UFPI/Hospital Getúlio Vargas e em Cirurgia Cardiovascular pelo Instituto do Coração (InCor) do Hospital das Clínicas da Faculdade de Medicina da USP. Possui observership em Cirurgia Cardíaca Minimamente Invasiva no Herzzentrum Leipzig, na Alemanha, e em Doenças da Aorta na Cleveland Clinic, nos Estados Unidos. Atua como cirurgião cardiovascular nos hospitais São Marcos, ItaCor e Unimed Primavera.',
+        image: 'https://i.ibb.co/nqY86D8g/Whats-App-Image-2026-01-21-at-1-11-33-PM.jpg'
       },
     ]
   },
