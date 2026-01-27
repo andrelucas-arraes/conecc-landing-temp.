@@ -2,12 +2,11 @@ import { motion } from 'framer-motion';
 
 const courseDays = [
   {
-    date: '19/03',
-    day: 'Quinta-feira',
+    date: '18/03',
+    day: 'Quarta-feira',
     location: 'UNINASSAU',
     courses: [
-      { name: 'IOT Adulto', price: 'R$ 80', spots: '30 vagas', shift: 'Manhã' },
-      { name: 'RCP Pediátrico', price: 'R$ 120', spots: '20 vagas', shift: 'Tarde' },
+      { name: 'RCP Pediátrico', price: 'R$ 120', spots: '20 vagas', shift: 'Noite' },
     ],
   },
   {
@@ -27,6 +26,7 @@ const courseDays = [
     courses: [
       { name: 'Acessos CV', price: 'R$ 80', spots: '20 vagas', shift: 'Manhã' },
       { name: 'Sutura', price: 'R$ 90', spots: '50 vagas (2 turmas)', shift: 'Manhã' },
+      { name: 'IOT Adulto', price: 'R$ 80', spots: '30 vagas', shift: 'Manhã' },
     ],
   },
 ];
@@ -91,7 +91,7 @@ export default function PracticalCourses() {
           <h2 className="text-4xl md:text-5xl font-bold text-[#F9F4F5] mb-6">Cursos Práticos</h2>
           <div className="w-16 h-1 bg-[#BC989A] mb-8 mx-auto"></div>
           <p className="text-lg text-[#D4B5B7]">
-            Os cursos práticos acontecem de 19 a 21 de março. <br /> Confira a programação, locais e garanta sua vaga.
+            Os cursos práticos acontecem nos dias 18, 20 e 21 de março. <br /> Confira a programação, locais e garanta sua vaga.
           </p>
         </motion.div>
 

@@ -100,7 +100,7 @@ export default function Hero() {
               className="flex flex-col items-center"
             >
               <p className="text-sm text-[#D4B5B7] mb-2">Cursos Práticos</p>
-              <p className="text-xl font-semibold">19 a 21 de março</p>
+              <p className="text-xl font-semibold">18, 20 e 21 de março</p>
             </motion.div>
             <motion.div
               variants={infoCardVariants}
