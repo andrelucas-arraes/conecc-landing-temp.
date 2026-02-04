@@ -171,7 +171,7 @@ export default function Tickets() {
             <motion.div
               key={index}
               className={`border-l-4 ${batch.highlighted ? 'border-[#5D2126]' : 'border-[#BC989A]'
-                } overflow-hidden`}
+                } overflow-hidden ${batch.soldOut ? 'grayscale-[0.5] opacity-80' : ''}`}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
@@ -201,6 +201,13 @@ export default function Tickets() {
                     {batch.highlighted && (
                       <span className="px-3 py-1 bg-[#BC989A] text-[#5D2126] text-xs font-bold rounded-full">
                         DESTAQUE
+                      </span>
+                    )}
+
+                    {/* NOVO: Badge de Esgotado */}
+                    {batch.soldOut && (
+                      <span className="px-3 py-1 bg-[#8C5E60] text-white text-xs font-bold rounded-full uppercase">
+                        Esgotado
                       </span>
                     )}
                   </div>
@@ -261,7 +268,11 @@ export default function Tickets() {
                             <Check className="w-4 h-4 md:w-5 md:h-5 text-[#BC989A] shrink-0" />
                             <span className="font-semibold text-[#593234] text-sm md:text-base truncate">{cat.category}</span>
                           </div>
-                          <span className="text-base md:text-xl font-bold text-[#5D2126] whitespace-nowrap shrink-0">{cat.price}</span>
+
+                          <span className={`text-base md:text-xl font-bold whitespace-nowrap shrink-0 ${batch.soldOut ? 'text-[#8C5E60]' : 'text-[#5D2126]'
+                            }`}>
+                            {cat.price}
+                          </span>
                         </motion.div>
                       ))}
 
