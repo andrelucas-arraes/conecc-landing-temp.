@@ -5,6 +5,7 @@ import { useState } from 'react';
 interface TicketCategory {
   category: string;
   price: string;
+  soldOut?: boolean;
 }
 
 interface TicketBatch {
@@ -17,6 +18,7 @@ interface TicketBatch {
   categories: TicketCategory[];
   highlighted?: boolean;
   disabled?: boolean;
+  soldOut?: boolean;
 }
 
 const ticketBatches: TicketBatch[] = [
@@ -27,11 +29,13 @@ const ticketBatches: TicketBatch[] = [
     remainingVacancies: 12,
     deadline: '',
     categories: [
-      { category: 'Médicos/Residentes', price: 'R$ 180,00' },
-      { category: 'Estudantes', price: 'R$ 120,00' },
-      { category: 'Profissionais de outras áreas', price: 'R$ 160,00' },
+      { category: 'Estudantes', price: 'ESGOTADO' },
+      { category: 'Médicos/Residentes', price: 'ESGOTADO' },
+      { category: 'Profissionais de outras áreas', price: 'ESGOTADO' },
+      { category: 'Grupo de 05 participantes', price: 'ESGOTADO' },
     ],
-    highlighted: true,
+    highlighted: false,
+    soldOut: true,
   },
   {
     name: '1º LOTE',
@@ -39,11 +43,13 @@ const ticketBatches: TicketBatch[] = [
     totalVacancies: 50,
     remainingVacancies: 35,
     categories: [
-      { category: 'Estudantes', price: 'Em breve' },
-      { category: 'Profissionais de outras áreas', price: 'Em breve' },
-      { category: 'Médicos/Residentes', price: 'Em breve' },
+      { category: 'Estudantes', price: 'R$ 160,00' },
+      { category: 'Médicos/Residentes', price: 'R$ 200,00' },
+      { category: 'Profissionais de outras áreas', price: 'R$ 180,00' },
+      { category: 'Grupo de 05 participantes', price: 'R$ 136,00 por pessoa' },
     ],
-    disabled: true,
+    disabled: false,
+    highlighted: true,
   },
   {
     name: '2º LOTE',
@@ -52,8 +58,9 @@ const ticketBatches: TicketBatch[] = [
     remainingVacancies: 150,
     categories: [
       { category: 'Estudantes', price: 'Em breve' },
-      { category: 'Profissionais de outras áreas', price: 'Em breve' },
       { category: 'Médicos/Residentes', price: 'Em breve' },
+      { category: 'Profissionais de outras áreas', price: 'Em breve' },
+      { category: 'Grupo de 05 participantes', price: 'Em breve' },
     ],
     disabled: true,
   },
@@ -64,8 +71,9 @@ const ticketBatches: TicketBatch[] = [
     remainingVacancies: 150,
     categories: [
       { category: 'Estudantes', price: 'Em breve' },
-      { category: 'Profissionais de outras áreas', price: 'Em breve' },
       { category: 'Médicos/Residentes', price: 'Em breve' },
+      { category: 'Profissionais de outras áreas', price: 'Em breve' },
+      { category: 'Grupo de 05 participantes', price: 'Em breve' },
     ],
     disabled: true,
   },
@@ -76,15 +84,16 @@ const ticketBatches: TicketBatch[] = [
     remainingVacancies: 150,
     categories: [
       { category: 'Estudantes', price: 'Em breve' },
-      { category: 'Profissionais de outras áreas', price: 'Em breve' },
       { category: 'Médicos/Residentes', price: 'Em breve' },
+      { category: 'Profissionais de outras áreas', price: 'Em breve' },
+      { category: 'Grupo de 05 participantes', price: 'Em breve' },
     ],
     disabled: true,
   },
 ];
 
 export default function Tickets() {
-  const [expandedBatch, setExpandedBatch] = useState<number | null>(0);
+  const [expandedBatch, setExpandedBatch] = useState<number | null>(1);
 
   const headerVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -257,7 +266,16 @@ export default function Tickets() {
                       ))}
 
                       {/* CTA Button */}
-                      {batch.disabled ? (
+                      {batch.soldOut ? (
+                        /* --- ESTADO 1: ESGOTADO --- */
+                        <div
+                          className="w-full mt-4 py-3 px-4 bg-[#BC989A] text-[#F9F4F5] font-bold rounded-lg inline-block text-center cursor-not-allowed opacity-60"
+                          aria-disabled="true"
+                        >
+                          Esgotado
+                        </div>
+                      ) : batch.disabled ? (
+                        /* --- ESTADO 2: EM BREVE --- */
                         <div
                           className="w-full mt-4 py-3 px-4 bg-[#BC989A] text-[#F9F4F5] font-bold rounded-lg inline-block text-center cursor-not-allowed opacity-60"
                           aria-disabled="true"
@@ -265,6 +283,7 @@ export default function Tickets() {
                           Em Breve
                         </div>
                       ) : (
+                        /* --- ESTADO 3: ATIVO (BOTÃO DE COMPRA) --- */
                         <motion.a
                           href="https://www.even3.com.br/conecc-i-congresso-de-especialidades-clinicas-e-cirurgicas-674375/"
                           target="_blank"
