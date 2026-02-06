@@ -11,11 +11,12 @@ const masterSponsor = {
 // Patrocinador Executivo - Fixo
 const executiveSponsors = [
     { name: 'Patrocinador Executivo 1', logo: 'https://i.ibb.co/BHCZG1Zk/upscalemedia-transformed.jpg', link: 'https://www.instagram.com/medsafebrasil' },
-    { name: 'Patrocinador Executivo 2', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: 'https://www.instagram.com/medsafebrasil' },
-    { name: 'Patrocinador Executivo 3', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: 'https://www.instagram.com/medsafebrasil' },
+    // { name: 'Patrocinador Executivo 2', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: 'https://www.instagram.com/medsafebrasil' },
+    // { name: 'Patrocinador Executivo 3', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: 'https://www.instagram.com/medsafebrasil' },
 ];
 
-// Slider - Premium, Destaque, Essencial (rodam em sequência)
+/* // Slider - Premium, Destaque, Essencial (rodam em sequência)
+// COMENTADO: IMPLEMENTAÇÃO FUTURA
 const sliderTiers = [
     {
         name: 'Patrocinador Premium',
@@ -42,6 +43,7 @@ const sliderTiers = [
         ]
     },
 ];
+*/
 
 // Apoio Institucional - Fixo no final (logos menores)
 const institutionalSupport = [
@@ -52,6 +54,8 @@ const institutionalSupport = [
 ];
 
 export default function Partners() {
+    // COMENTADO: Lógica do Slider
+    /*
     const [currentSlide, setCurrentSlide] = useState(0);
 
     // Auto-advance slider every 5 seconds
@@ -61,6 +65,7 @@ export default function Partners() {
         }, 5000);
         return () => clearInterval(interval);
     }, []);
+    */
 
     const headerVariants = {
         hidden: { opacity: 0, y: 30 },
@@ -94,11 +99,13 @@ export default function Partners() {
         },
     };
 
+    /*
     const slideVariants = {
         enter: { opacity: 0, x: 100 },
         center: { opacity: 1, x: 0 },
         exit: { opacity: 0, x: -100 },
     };
+    */
 
     return (
         <section id="parceiros" className="py-12 bg-white">
@@ -157,7 +164,7 @@ export default function Partners() {
                     >
                         <h3 className="text-2xl font-bold text-[#5D2126] text-center">Patrocinador Executivo</h3>
                         <motion.div
-                            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto"
+                            className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto"
                             variants={gridVariants}
                         >
                             {executiveSponsors.map((sponsor, index) => (
@@ -166,7 +173,7 @@ export default function Partners() {
                                     href={sponsor.link || '#'}
                                     target={sponsor.link ? "_blank" : undefined}
                                     rel={sponsor.link ? "noopener noreferrer" : undefined}
-                                    className="bg-[#F9F4F5] rounded-lg border-2 border-[#D4B5B7] flex items-center justify-center h-56 transition-all duration-300 hover:border-[#BC989A] hover:shadow-lg cursor-pointer"
+                                    className="bg-[#F9F4F5] rounded-lg border-2 border-[#D4B5B7] flex items-center justify-center h-56 w-full sm:w-72 transition-all duration-300 hover:border-[#BC989A] hover:shadow-lg cursor-pointer"
                                     variants={logoVariants}
                                     whileHover={{ y: -5, scale: 1.03 }}
                                 >
@@ -182,6 +189,8 @@ export default function Partners() {
                     </motion.div>
 
                     {/* SLIDER AUTOMÁTICO - Premium, Destaque, Essencial */}
+                    {/* COMENTADO: IMPLEMENTAÇÃO FUTURA */}
+                    {/*
                     <motion.div
                         className="space-y-6"
                         initial="hidden"
@@ -189,15 +198,15 @@ export default function Partners() {
                         viewport={{ once: true, amount: 0.2 }}
                         variants={gridVariants}
                     >
-                        {/* Slider Indicators */}
+                        
                         <div className="flex justify-center gap-2 mb-4">
                             {sliderTiers.map((tier, index) => (
                                 <button
                                     key={index}
                                     onClick={() => setCurrentSlide(index)}
                                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${currentSlide === index
-                                        ? 'bg-[#5D2126] text-white'
-                                        : 'bg-[#F9F4F5] text-[#5D2126] hover:bg-[#D4B5B7]'
+                                            ? 'bg-[#5D2126] text-white'
+                                            : 'bg-[#F9F4F5] text-[#5D2126] hover:bg-[#D4B5B7]'
                                         }`}
                                 >
                                     {tier.name.replace('Patrocinador ', '')}
@@ -205,7 +214,7 @@ export default function Partners() {
                             ))}
                         </div>
 
-                        {/* Slider Content */}
+                        
                         <div className="relative overflow-hidden min-h-[320px]">
                             <AnimatePresence mode="wait">
                                 <motion.div
@@ -248,7 +257,7 @@ export default function Partners() {
                             </AnimatePresence>
                         </div>
 
-                        {/* Progress Bar */}
+                        
                         <div className="flex justify-center gap-2 mt-4">
                             {sliderTiers.map((_, index) => (
                                 <div
@@ -259,6 +268,7 @@ export default function Partners() {
                             ))}
                         </div>
                     </motion.div>
+                    */}
 
                     {/* APOIO INSTITUCIONAL - FIXO (logos menores) */}
                     <motion.div
@@ -301,4 +311,3 @@ export default function Partners() {
         </section>
     );
 }
-
