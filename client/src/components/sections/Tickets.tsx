@@ -43,13 +43,13 @@ const ticketBatches: TicketBatch[] = [
     totalVacancies: 50,
     remainingVacancies: 35,
     categories: [
-      { category: 'Estudantes', price: 'R$ 160,00' },
-      { category: 'Médicos/Residentes', price: 'R$ 200,00' },
-      { category: 'Profissionais de outras áreas', price: 'R$ 180,00' },
-      { category: 'Grupo de 05 participantes', price: 'R$ 136,00 por pessoa' },
+      { category: 'Estudantes', price: 'ESGOTADO' },
+      { category: 'Médicos/Residentes', price: 'ESGOTADO' },
+      { category: 'Profissionais de outras áreas', price: 'ESGOTADO' },
+      { category: 'Grupo de 05 participantes', price: 'ESGOTADO' },
     ],
     disabled: false,
-    highlighted: true,
+    soldOut: true,
   },
   {
     name: '2º LOTE',
@@ -57,12 +57,13 @@ const ticketBatches: TicketBatch[] = [
     totalVacancies: 150,
     remainingVacancies: 150,
     categories: [
-      { category: 'Estudantes', price: 'Em breve' },
-      { category: 'Médicos/Residentes', price: 'Em breve' },
-      { category: 'Profissionais de outras áreas', price: 'Em breve' },
-      { category: 'Grupo de 05 participantes', price: 'Em breve' },
+      { category: 'Estudantes', price: 'R$ 190,00' },
+      { category: 'Médicos/Residentes', price: 'R$ 230,00' },
+      { category: 'Profissionais de outras áreas', price: 'R$ 210,00' },
+      { category: 'Grupo de 05 participantes', price: 'R$ 174,80 por pessoa' },
     ],
-    disabled: true,
+    disabled: false,
+    highlighted: true,
   },
   {
     name: '3º LOTE',
@@ -93,7 +94,8 @@ const ticketBatches: TicketBatch[] = [
 ];
 
 export default function Tickets() {
-  const [expandedBatch, setExpandedBatch] = useState<number | null>(1);
+  // Como deve ficar (para abrir o 2º Lote por padrão):
+  const [expandedBatch, setExpandedBatch] = useState<number | null>(2);
 
   const headerVariants = {
     hidden: { opacity: 0, y: 30 },

@@ -1,10 +1,10 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 // Patrocinador Master - Fixo
 const masterSponsor = {
     name: 'Patrocinador Master',
-    logo: 'https://i.ibb.co/RGwDzn5s/Design-sem-nome-2.jpg',
+    logo: 'https://i.ibb.co/S4fkCJpd/COTA-MASTER-DIAMANTE-1.jpg',
     link: 'https://www.instagram.com/grupomedcof/'
 };
 
@@ -15,8 +15,7 @@ const executiveSponsors = [
     // { name: 'Patrocinador Executivo 3', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: 'https://www.instagram.com/medsafebrasil' },
 ];
 
-/* // Slider - Premium, Destaque, Essencial (rodam em sequência)
-// COMENTADO: IMPLEMENTAÇÃO FUTURA
+// Slider - Premium, Destaque, Essencial (rodam em sequência)
 const sliderTiers = [
     {
         name: 'Patrocinador Premium',
@@ -37,13 +36,12 @@ const sliderTiers = [
     {
         name: 'Patrocinador Essencial',
         sponsors: [
-            { name: 'Patrocinador Essencial 1', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
-            { name: 'Patrocinador Essencial 2', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+            { name: 'Fotos Produções', logo: 'https://i.ibb.co/7dWFx3yM/COTA-ESSENCIAL.jpg', link: 'https://www.instagram.com/fotosproducoes' },
+            { name: 'Espaçolaser', logo: 'https://i.ibb.co/ZRtXWBGK/COTA-ESSENCIAL-1.jpg', link: 'https://www.instagram.com/espacolaser.teresina' },
             { name: 'Patrocinador Essencial 3', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
         ]
     },
 ];
-*/
 
 // Apoio Institucional - Fixo no final (logos menores)
 const institutionalSupport = [
@@ -54,18 +52,44 @@ const institutionalSupport = [
 ];
 
 export default function Partners() {
-    // COMENTADO: Lógica do Slider
-    /*
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
+    const pauseTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-    // Auto-advance slider every 5 seconds
+    // Auto-advance slider every 5 seconds (only when not paused)
     useEffect(() => {
+        if (isPaused) return;
+
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % sliderTiers.length);
         }, 5000);
         return () => clearInterval(interval);
+    }, [isPaused]);
+
+    // Handle manual slide change
+    const handleManualChange = (index: number) => {
+        setCurrentSlide(index);
+        setIsPaused(true);
+
+        // Clear any existing timeout to reset the pause timer
+        if (pauseTimeoutRef.current) {
+            clearTimeout(pauseTimeoutRef.current);
+        }
+
+        // Resume auto-advance after 10 seconds
+        pauseTimeoutRef.current = setTimeout(() => {
+            setIsPaused(false);
+        }, 10000);
+    };
+
+    // Cleanup timeout on unmount
+    useEffect(() => {
+        return () => {
+            if (pauseTimeoutRef.current) {
+                clearTimeout(pauseTimeoutRef.current);
+            }
+        };
     }, []);
-    */
 
     const headerVariants = {
         hidden: { opacity: 0, y: 30 },
@@ -99,13 +123,11 @@ export default function Partners() {
         },
     };
 
-    /*
     const slideVariants = {
         enter: { opacity: 0, x: 100 },
         center: { opacity: 1, x: 0 },
         exit: { opacity: 0, x: -100 },
     };
-    */
 
     return (
         <section id="parceiros" className="py-12 bg-white">
@@ -189,8 +211,6 @@ export default function Partners() {
                     </motion.div>
 
                     {/* SLIDER AUTOMÁTICO - Premium, Destaque, Essencial */}
-                    {/* COMENTADO: IMPLEMENTAÇÃO FUTURA */}
-                    {/*
                     <motion.div
                         className="space-y-6"
                         initial="hidden"
@@ -198,15 +218,15 @@ export default function Partners() {
                         viewport={{ once: true, amount: 0.2 }}
                         variants={gridVariants}
                     >
-                        
+
                         <div className="flex justify-center gap-2 mb-4">
                             {sliderTiers.map((tier, index) => (
                                 <button
                                     key={index}
-                                    onClick={() => setCurrentSlide(index)}
+                                    onClick={() => handleManualChange(index)}
                                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${currentSlide === index
-                                            ? 'bg-[#5D2126] text-white'
-                                            : 'bg-[#F9F4F5] text-[#5D2126] hover:bg-[#D4B5B7]'
+                                        ? 'bg-[#5D2126] text-white'
+                                        : 'bg-[#F9F4F5] text-[#5D2126] hover:bg-[#D4B5B7]'
                                         }`}
                                 >
                                     {tier.name.replace('Patrocinador ', '')}
@@ -214,7 +234,7 @@ export default function Partners() {
                             ))}
                         </div>
 
-                        
+
                         <div className="relative overflow-hidden min-h-[320px]">
                             <AnimatePresence mode="wait">
                                 <motion.div
@@ -239,8 +259,8 @@ export default function Partners() {
                                                 href={sponsor.link || '#'}
                                                 target={sponsor.link ? "_blank" : undefined}
                                                 rel={sponsor.link ? "noopener noreferrer" : undefined}
-                                                className={`bg-[#F9F4F5] rounded-lg border-2 border-[#D4B5B7] flex items-center justify-center transition-all duration-300 hover:border-[#BC989A] hover:shadow-lg cursor-pointer w-36 sm:w-48 md:w-56 ${currentSlide === 0 ? 'h-32 sm:h-48' : currentSlide === 1 ? 'h-28 sm:h-44' : 'h-24 sm:h-36'
-                                                    }`}
+                                                className={`bg - [#F9F4F5] rounded - lg border - 2 border - [#D4B5B7] flex items - center justify - center transition - all duration - 300 hover: border - [#BC989A] hover: shadow - lg cursor - pointer w - 36 sm: w - 48 md: w - 56 ${currentSlide === 0 ? 'h-32 sm:h-48' : currentSlide === 1 ? 'h-28 sm:h-44' : 'h-24 sm:h-36'
+                                                    } `}
                                                 variants={logoVariants}
                                                 whileHover={{ y: -5, scale: 1.03 }}
                                             >
@@ -257,18 +277,17 @@ export default function Partners() {
                             </AnimatePresence>
                         </div>
 
-                        
+
                         <div className="flex justify-center gap-2 mt-4">
                             {sliderTiers.map((_, index) => (
                                 <div
                                     key={index}
-                                    className={`h-1 rounded-full transition-all duration-500 ${currentSlide === index ? 'w-8 bg-[#5D2126]' : 'w-2 bg-[#D4B5B7]'
-                                        }`}
+                                    className={`h - 1 rounded - full transition - all duration - 500 ${currentSlide === index ? 'w-8 bg-[#5D2126]' : 'w-2 bg-[#D4B5B7]'
+                                        } `}
                                 />
                             ))}
                         </div>
                     </motion.div>
-                    */}
 
                     {/* APOIO INSTITUCIONAL - FIXO (logos menores) */}
                     <motion.div
@@ -298,7 +317,7 @@ export default function Partners() {
                                 >
                                     <img
                                         src={support.logo}
-                                        alt={`${support.name}`}
+                                        alt={`${support.name} `}
                                         loading="lazy"
                                         className="w-full h-full object-contain p-1 rounded-lg"
                                     />
