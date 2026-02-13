@@ -10,7 +10,7 @@ const masterSponsor = {
 
 // Patrocinador Executivo - Fixo
 const executiveSponsors = [
-    { name: 'Patrocinador Executivo 1', logo: 'https://i.ibb.co/BHCZG1Zk/upscalemedia-transformed.jpg', link: 'https://www.instagram.com/medsafebrasil' },
+    { name: 'Patrocinador Destaque', logo: 'https://i.ibb.co/BHCZG1Zk/upscalemedia-transformed.jpg', link: 'https://www.instagram.com/medsafebrasil' },
     // { name: 'Patrocinador Executivo 2', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: 'https://www.instagram.com/medsafebrasil' },
     // { name: 'Patrocinador Executivo 3', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: 'https://www.instagram.com/medsafebrasil' },
 ];
@@ -18,19 +18,9 @@ const executiveSponsors = [
 // Slider - Premium, Destaque, Essencial (rodam em sequência)
 const sliderTiers = [
     {
-        name: 'Patrocinador Premium',
-        sponsors: [
-            { name: 'Patrocinador Premium 1', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
-            { name: 'Patrocinador Premium 2', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
-            { name: 'Patrocinador Premium 3', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
-        ]
-    },
-    {
         name: 'Patrocinador Destaque',
         sponsors: [
-            { name: 'Patrocinador Destaque 1', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
-            { name: 'Patrocinador Destaque 2', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
-            { name: 'Patrocinador Destaque 3', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+            { name: 'UNIFSA - Centro Universitário Santo Agostinho', logo: 'https://i.ibb.co/jvNHsST5/COTA-DESTAQUE.png', link: 'https://www.instagram.com/unifsa/' },
         ]
     },
     {
@@ -38,12 +28,25 @@ const sliderTiers = [
         sponsors: [
             { name: 'Fotos Produções', logo: 'https://i.ibb.co/7dWFx3yM/COTA-ESSENCIAL.jpg', link: 'https://www.instagram.com/fotosproducoes' },
             { name: 'Espaçolaser', logo: 'https://i.ibb.co/ZRtXWBGK/COTA-ESSENCIAL-1.jpg', link: 'https://www.instagram.com/espacolaser.teresina' },
-            { name: 'Patrocinador Essencial 3', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: '' },
+        ]
+    },
+    {
+        name: 'Patrocinador Platina',
+        sponsors: [
+            { name: 'Instituto Cirúrgico - Treinamento e Precisão', logo: 'https://i.ibb.co/twZMrx1Z/COTA-PLATINA.png', link: 'https://www.instagram.com/institutocirurgicothe/' },
+            { name: 'Afya Teresina', logo: 'https://i.ibb.co/NdRTbzLm/COTA-PLATINA-1.png', link: 'https://www.instagram.com/afya.uninovafapi/' },
+            { name: 'Enayram Distribuidora', logo: 'https://i.ibb.co/PZHM52gQ/COTA-PLATINA-2.png', link: 'https://www.instagram.com/enayramwines/' },
+        ]
+    },
+    {
+        name: 'Patrocinador Prata',
+        sponsors: [
+            { name: 'CareOn', logo: 'https://i.ibb.co/vxNTnKLQ/COTA-PRATA.png', link: 'https://www.instagram.com/careonbrasil/' },
         ]
     },
 ];
 
-// Apoio Institucional - Fixo no final (logos menores)
+// Apoio Institucional
 const institutionalSupport = [
     { name: 'CRM Piauí', logo: 'https://i.ibb.co/ch9219nC/Design-sem-nome.png', link: 'https://www.instagram.com/crmpiaui' },
     { name: 'AMB Piauí', logo: 'https://i.ibb.co/rRxJTYN3/Design-sem-nome-2.png', link: 'https://www.instagram.com/ambpiaui' },
