@@ -7,88 +7,78 @@ const committeeMembers = [
     {
         name: 'Sabrina Dias',
         role: 'Presidente',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/nNj66ZD0/Whats-App-Image-2026-02-14-at-9-29-24-AM.jpg'
     },
     {
         name: 'Maria Eduarda Cabral',
         role: 'Vice Presidente',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
-    },
-    {
-        name: 'Erika Custódio',
-        role: 'Diretora Geral',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/ks35hjWM/Whats-App-Image-2026-02-14-at-11-54-55-AM.jpg'
     },
     {
         name: 'Angella Moniely',
         role: 'Diretora de Logística e Infraestrutura',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/V0zLW3kg/Whats-App-Image-2026-02-14-at-11-27-15-AM.jpg'
     },
     {
         name: 'Alice Emanuelle',
         role: 'Diretora de Logística e Infraestrutura',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/wFP3X93K/Whats-App-Image-2026-02-14-at-11-27-34-AM.jpg'
     },
     {
         name: 'Estéfane Portela',
         role: 'Diretora de Marketing',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/k22f2MWc/Whats-App-Image-2026-02-14-at-9-37-18-AM.jpg'
     },
     {
         name: 'Habina Alencar',
         role: 'Diretora de Patrocínio',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/YTqXCmVb/Whats-App-Image-2026-02-14-at-11-29-06-AM.jpg'
     },
     {
         name: 'Sabrina Vitória',
         role: 'Diretora de Cursos Práticos',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/Fb0J7J6n/IMG-8547-JPG-1.jpg'
     },
     {
         name: 'Maria Eveline',
         role: 'Diretora de Cursos Práticos',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/vvMYSghq/Whats-App-Image-2026-02-14-at-11-29-38-AM.jpg'
     },
     {
         name: 'Antônio Mourão',
         role: 'Diretor de Administração',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/3y3H7p7z/Whats-App-Image-2026-02-14-at-11-28-13-AM.jpg'
     },
     {
         name: 'Salma Clímaco',
         role: 'Diretora de Programação Científica',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/fbmjGrN/Whats-App-Image-2026-02-14-at-9-35-53-AM.jpg'
     },
     {
         name: 'George Torquato',
         role: 'Diretor de Administração',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/4Z6WX06W/Whats-App-Image-2026-02-14-at-11-28-49-AM.jpg'
     },
     {
         name: 'Lucas Teixeira',
         role: 'Diretor de Marketing',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/fdPPjqLv/Whats-App-Image-2026-02-14-at-11-26-45-AM-1.jpg'
     },
     {
         name: 'Carlos Rafael',
         role: 'Diretor de Patrocínio',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/NgNxmsXT/Whats-App-Image-2026-02-14-at-11-29-21-AM.jpg'
     },
     {
         name: 'Layane Coutinho',
         role: 'Diretora de Trabalhos Científicos',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/fGTDk5Fm/Whats-App-Image-2026-02-14-at-9-30-32-AM.jpg'
     },
     {
         name: 'Wesley Brandolee',
         role: 'Diretor de Programação Científica',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
+        image: 'https://i.ibb.co/SDgx4PRd/Whats-App-Image-2026-02-14-at-9-36-33-AM.jpg'
     },
-    {
-        name: 'Expedita Escórcio',
-        role: 'Diretora de Trabalhos Científicos',
-        image: 'https://thumbs.dreamstime.com/b/homem-cinzento-do-placeholder-da-foto-pessoa-136701243.jpg'
-    }
 ];
 
 export default function OrganizingCommittee() {
@@ -121,11 +111,11 @@ export default function OrganizingCommittee() {
     const maxIndex = totalPages - 1;
 
     const nextSlide = () => {
-        setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
+        setCurrentIndex((prev: number) => Math.min(prev + 1, maxIndex));
     };
 
     const prevSlide = () => {
-        setCurrentIndex((prev) => Math.max(prev - 1, 0));
+        setCurrentIndex((prev: number) => Math.max(prev - 1, 0));
     };
 
     const goToSlide = (index: number) => {

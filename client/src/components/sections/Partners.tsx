@@ -18,16 +18,9 @@ const executiveSponsors = [
 // Slider - Premium, Destaque, Essencial (rodam em sequência)
 const sliderTiers = [
     {
-        name: 'Patrocinador Destaque',
+        name: 'Patrocinador Diamante',
         sponsors: [
-            { name: 'UNIFSA - Centro Universitário Santo Agostinho', logo: 'https://i.ibb.co/jvNHsST5/COTA-DESTAQUE.png', link: 'https://www.instagram.com/unifsa/' },
-        ]
-    },
-    {
-        name: 'Patrocinador Essencial',
-        sponsors: [
-            { name: 'Fotos Produções', logo: 'https://i.ibb.co/7dWFx3yM/COTA-ESSENCIAL.jpg', link: 'https://www.instagram.com/fotosproducoes' },
-            { name: 'Espaçolaser', logo: 'https://i.ibb.co/ZRtXWBGK/COTA-ESSENCIAL-1.jpg', link: 'https://www.instagram.com/espacolaser.teresina' },
+            { name: 'Clínica Vida em Equilíbrio', logo: 'https://i.ibb.co/RG3HznML/COTA-PRATA.png', link: 'https://www.instagram.com/vidaemequilibrio.the' },
         ]
     },
     {
@@ -42,6 +35,19 @@ const sliderTiers = [
         name: 'Patrocinador Prata',
         sponsors: [
             { name: 'CareOn', logo: 'https://i.ibb.co/vxNTnKLQ/COTA-PRATA.png', link: 'https://www.instagram.com/careonbrasil/' },
+        ]
+    },
+    {
+        name: 'Patrocinador Destaque',
+        sponsors: [
+            { name: 'UNIFSA - Centro Universitário Santo Agostinho', logo: 'https://i.ibb.co/jvNHsST5/COTA-DESTAQUE.png', link: 'https://www.instagram.com/unifsa/' },
+        ]
+    },
+    {
+        name: 'Patrocinador Essencial',
+        sponsors: [
+            { name: 'Fotos Produções', logo: 'https://i.ibb.co/7dWFx3yM/COTA-ESSENCIAL.jpg', link: 'https://www.instagram.com/fotosproducoes' },
+            { name: 'Espaçolaser', logo: 'https://i.ibb.co/ZRtXWBGK/COTA-ESSENCIAL-1.jpg', link: 'https://www.instagram.com/espacolaser.teresina' },
         ]
     },
 ];
