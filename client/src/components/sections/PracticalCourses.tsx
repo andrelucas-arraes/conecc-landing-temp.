@@ -4,7 +4,7 @@ const courseDays = [
   {
     date: '18/03',
     day: 'Quarta-feira',
-    location: 'UNINASSAU',
+    location: 'UNI-CET',
     courses: [
       { name: 'RCP Pediátrico', price: 'R$ 120', spots: '20 vagas', shift: 'Noite' },
     ],
@@ -22,7 +22,7 @@ const courseDays = [
   {
     date: '21/03',
     day: 'Sábado',
-    location: 'FACID',
+    location: 'UNI-CET',
     courses: [
       { name: 'Acessos CV', price: 'R$ 80', spots: '20 vagas', shift: 'Manhã' },
       { name: 'Sutura', price: 'R$ 90', spots: '50 vagas (2 turmas)', shift: 'Manhã' },
