@@ -71,13 +71,13 @@ const ticketBatches: TicketBatch[] = [
     totalVacancies: 150,
     remainingVacancies: 150,
     categories: [
-      { category: 'Estudantes', price: 'R$ 230,00' },
-      { category: 'Médicos/Residentes', price: 'R$ 280,00' },
-      { category: 'Profissionais de outras áreas', price: 'R$ 250,00' },
-      { category: 'Grupo de 05 participantes', price: 'R$ 207,00 por pessoa' },
+      { category: 'Estudantes', price: 'ESGOTADO' },
+      { category: 'Médicos/Residentes', price: 'ESGOTADO' },
+      { category: 'Profissionais de outras áreas', price: 'ESGOTADO' },
+      { category: 'Grupo de 05 participantes', price: 'ESGOTADO' },
     ],
     disabled: false,
-    highlighted: true,
+    soldOut: true,
   },
   {
     name: '4º LOTE',
@@ -85,18 +85,19 @@ const ticketBatches: TicketBatch[] = [
     totalVacancies: 150,
     remainingVacancies: 150,
     categories: [
-      { category: 'Estudantes', price: 'Em breve' },
-      { category: 'Médicos/Residentes', price: 'Em breve' },
-      { category: 'Profissionais de outras áreas', price: 'Em breve' },
-      { category: 'Grupo de 05 participantes', price: 'Em breve' },
+      { category: 'Estudantes', price: 'R$ 260,00' },
+      { category: 'Médicos/Residentes', price: 'R$ 310,00' },
+      { category: 'Profissionais de outras áreas', price: 'R$ 280,00' },
+      { category: 'Grupo de 05 participantes', price: 'R$ 220,00 por pessoa' },
     ],
-    disabled: true,
+    disabled: false,
+    highlighted: true,
   },
 ];
 
 export default function Tickets() {
   // Como deve ficar (para abrir o 2º Lote por padrão):
-  const [expandedBatch, setExpandedBatch] = useState<number | null>(3);
+  const [expandedBatch, setExpandedBatch] = useState<number | null>(4);
 
   const headerVariants = {
     hidden: { opacity: 0, y: 30 },
