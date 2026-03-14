@@ -2,12 +2,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 
 // Patrocinador Master - Fixo
-const masterSponsor = {
-    name: 'Patrocinador Master',
-    logo: 'https://i.ibb.co/S4fkCJpd/COTA-MASTER-DIAMANTE-1.jpg',
-    link: 'https://www.instagram.com/grupomedcof/'
-};
-
+const masterSponsors = [
+    {
+        name: 'Grupomedcof',
+        logo: 'https://i.ibb.co/S4fkCJpd/COTA-MASTER-DIAMANTE-1.jpg',
+        link: 'https://www.instagram.com/grupomedcof/'
+    },
+    {
+        name: 'SOMERION',
+        logo: 'https://i.ibb.co/gZTbRSwx/COTA-PRATA-1.png',
+        link: 'https://www.instagram.com/graficamedicabrasil'
+    }
+];
 // Patrocinador Executivo - Fixo
 const executiveSponsors = [
     { name: 'Patrocinador Destaque', logo: 'https://i.ibb.co/BHCZG1Zk/upscalemedia-transformed.jpg', link: 'https://www.instagram.com/medsafebrasil' },
@@ -41,6 +47,9 @@ const sliderTiers = [
         name: 'Patrocinador Destaque',
         sponsors: [
             { name: 'UNIFSA - Centro Universitário Santo Agostinho', logo: 'https://i.ibb.co/jvNHsST5/COTA-DESTAQUE.png', link: 'https://www.instagram.com/unifsa/' },
+            { name: 'Laboratório Gen', logo: 'https://i.ibb.co/G3JmK7Y2/COTA-PRATA-2.png', link: 'https://www.instagram.com/laboratorio.gen' },
+            { name: 'Georgianoneto', logo: 'https://i.ibb.co/MFyf85T/COTA-PRATA-3.png', link: 'https://www.instagram.com/georgianoneto' },
+
         ]
     },
     {
@@ -166,22 +175,25 @@ export default function Partners() {
                         variants={gridVariants}
                     >
                         <h3 className="text-2xl font-bold text-[#5D2126] text-center">Patrocinador Master</h3>
-                        <div className="max-w-md mx-auto">
-                            <motion.a
-                                href={masterSponsor.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-[#F9F4F5] rounded-lg border-2 border-[#D4B5B7] flex items-center justify-center h-72 transition-all duration-300 hover:border-[#BC989A] hover:shadow-lg cursor-pointer"
-                                variants={logoVariants}
-                                whileHover={{ y: -5, scale: 1.03 }}
-                            >
-                                <img
-                                    src={masterSponsor.logo}
-                                    alt={`${masterSponsor.name} - Patrocinador`}
-                                    loading="lazy"
-                                    className="w-full h-full object-contain md:object-cover rounded-lg"
-                                />
-                            </motion.a>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                            {masterSponsors.map((sponsor, index) => (
+                                <motion.a
+                                    key={index}
+                                    href={sponsor.link !== '#' ? sponsor.link : undefined}
+                                    target={sponsor.link !== '#' ? "_blank" : undefined}
+                                    rel={sponsor.link !== '#' ? "noopener noreferrer" : undefined}
+                                    className="bg-[#F9F4F5] rounded-lg border-2 border-[#D4B5B7] flex items-center justify-center h-72 w-full transition-all duration-300 hover:border-[#BC989A] hover:shadow-lg cursor-pointer"
+                                    variants={logoVariants}
+                                    whileHover={{ y: -5, scale: 1.03 }}
+                                >
+                                    <img
+                                        src={sponsor.logo}
+                                        alt={`${sponsor.name} - Patrocinador`}
+                                        loading="lazy"
+                                        className="w-full h-full object-contain md:object-cover rounded-lg"
+                                    />
+                                </motion.a>
+                            ))}
                         </div>
                     </motion.div>
 
