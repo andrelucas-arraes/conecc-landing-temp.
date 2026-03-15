@@ -8,58 +8,38 @@ const masterSponsors = [
         logo: 'https://i.ibb.co/S4fkCJpd/COTA-MASTER-DIAMANTE-1.jpg',
         link: 'https://www.instagram.com/grupomedcof/'
     },
-    {
-        name: 'SOMERION',
-        logo: 'https://i.ibb.co/gZTbRSwx/COTA-PRATA-1.png',
-        link: 'https://www.instagram.com/graficamedicabrasil'
-    }
 ];
 // Patrocinador Executivo - Fixo
 const executiveSponsors = [
     { name: 'Patrocinador Destaque', logo: 'https://i.ibb.co/BHCZG1Zk/upscalemedia-transformed.jpg', link: 'https://www.instagram.com/medsafebrasil' },
-    // { name: 'Patrocinador Executivo 2', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: 'https://www.instagram.com/medsafebrasil' },
-    // { name: 'Patrocinador Executivo 3', logo: 'https://i.ibb.co/VYf5nBYS/Design-sem-nome-5.png', link: 'https://www.instagram.com/medsafebrasil' },
 ];
 
-// Slider - Premium, Destaque, Essencial (rodam em sequência)
-const sliderTiers = [
-    {
-        name: 'Patrocinador Diamante',
-        sponsors: [
-            { name: 'Clínica Vida em Equilíbrio', logo: 'https://i.ibb.co/RG3HznML/COTA-PRATA.png', link: 'https://www.instagram.com/vidaemequilibrio.the' },
-        ]
-    },
-    {
-        name: 'Patrocinador Platina',
-        sponsors: [
-            { name: 'Instituto Cirúrgico - Treinamento e Precisão', logo: 'https://i.ibb.co/twZMrx1Z/COTA-PLATINA.png', link: 'https://www.instagram.com/institutocirurgicothe/' },
-            { name: 'Afya Teresina', logo: 'https://i.ibb.co/NdRTbzLm/COTA-PLATINA-1.png', link: 'https://www.instagram.com/afya.uninovafapi/' },
-            { name: 'Enayram Distribuidora', logo: 'https://i.ibb.co/PZHM52gQ/COTA-PLATINA-2.png', link: 'https://www.instagram.com/enayramwines/' },
-        ]
-    },
-    {
-        name: 'Patrocinador Prata',
-        sponsors: [
-            { name: 'CareOn', logo: 'https://i.ibb.co/vxNTnKLQ/COTA-PRATA.png', link: 'https://www.instagram.com/careonbrasil/' },
-        ]
-    },
-    {
-        name: 'Patrocinador Destaque',
-        sponsors: [
-            { name: 'UNIFSA - Centro Universitário Santo Agostinho', logo: 'https://i.ibb.co/jvNHsST5/COTA-DESTAQUE.png', link: 'https://www.instagram.com/unifsa/' },
-            { name: 'Laboratório Gen', logo: 'https://i.ibb.co/G3JmK7Y2/COTA-PRATA-2.png', link: 'https://www.instagram.com/laboratorio.gen' },
-            { name: 'Georgianoneto', logo: 'https://i.ibb.co/MFyf85T/COTA-PRATA-3.png', link: 'https://www.instagram.com/georgianoneto' },
-
-        ]
-    },
-    {
-        name: 'Patrocinador Essencial',
-        sponsors: [
-            { name: 'Fotos Produções', logo: 'https://i.ibb.co/7dWFx3yM/COTA-ESSENCIAL.jpg', link: 'https://www.instagram.com/fotosproducoes' },
-            { name: 'Espaçolaser', logo: 'https://i.ibb.co/ZRtXWBGK/COTA-ESSENCIAL-1.jpg', link: 'https://www.instagram.com/espacolaser.teresina' },
-        ]
-    },
+// Todos os patrocinadores
+const allDiamanteSponsors = [
+    { name: 'Clínica Vida em Equilíbrio', logo: 'https://i.ibb.co/RG3HznML/COTA-PRATA.png', link: 'https://www.instagram.com/vidaemequilibrio.the' },
+    { name: 'Instituto Cirúrgico - Treinamento e Precisão', logo: 'https://i.ibb.co/twZMrx1Z/COTA-PLATINA.png', link: 'https://www.instagram.com/institutocirurgicothe/' },
+    { name: 'Afya Teresina', logo: 'https://i.ibb.co/NdRTbzLm/COTA-PLATINA-1.png', link: 'https://www.instagram.com/afya.uninovafapi/' },
+    { name: 'Enayram Distribuidora', logo: 'https://i.ibb.co/PZHM52gQ/COTA-PLATINA-2.png', link: 'https://www.instagram.com/enayramwines/' },
+    { name: 'CareOn', logo: 'https://i.ibb.co/vxNTnKLQ/COTA-PRATA.png', link: 'https://www.instagram.com/careonbrasil/' },
+    { name: 'UNIFSA - Centro Universitário Santo Agostinho', logo: 'https://i.ibb.co/jvNHsST5/COTA-DESTAQUE.png', link: 'https://www.instagram.com/unifsa/' },
+    { name: 'Laboratório Gen', logo: 'https://i.ibb.co/G3JmK7Y2/COTA-PRATA-2.png', link: 'https://www.instagram.com/laboratorio.gen' },
+    { name: 'Georgianoneto', logo: 'https://i.ibb.co/MFyf85T/COTA-PRATA-3.png', link: 'https://www.instagram.com/georgianoneto' },
+    { name: 'Fotos Produções', logo: 'https://i.ibb.co/7dWFx3yM/COTA-ESSENCIAL.jpg', link: 'https://www.instagram.com/fotosproducoes' },
+    { name: 'Espaçolaser', logo: 'https://i.ibb.co/ZRtXWBGK/COTA-ESSENCIAL-1.jpg', link: 'https://www.instagram.com/espacolaser.teresina' },
+    { name: 'SOMERION', logo: 'https://i.ibb.co/gZTbRSwx/COTA-PRATA-1.png', link: 'https://www.instagram.com/graficamedicabrasil' },
+    { name: 'instituto cafeína', logo: 'https://i.ibb.co/cqW44pb/COTA-PRATA-2.png', link: '#' },
+    { name: 'SALVE VIDAS', logo: 'https://i.ibb.co/nM4Mmph7/COTA-PRATA-3.png', link: '#' },
+    { name: 'EFIRA', logo: 'https://i.ibb.co/XrS3zFTS/COTA-PRATA-4.png', link: '#' },
+    { name: 'wemeds', logo: 'https://i.ibb.co/d4pyxYFw/COTA-PRATA-5.png', link: '#' },
+    { name: 'IBBIO', logo: 'https://i.ibb.co/TMWkHP5f/COTA-PRATA-6.png', link: '#' },
+    { name: 'DOCTOR STORE', logo: 'https://i.ibb.co/Q3XdMQsv/COTA-PRATA-7.png', link: '#' },
+    { name: 'UNIFAESF CENTRO UNIVERSITÁRIO', logo: 'https://i.ibb.co/5x8ZzNpy/COTA-PRATA.png', link: '#' },
 ];
+
+const sliderTiers = Array.from({ length: Math.ceil(allDiamanteSponsors.length / 4) }, (_, i) => ({
+    name: 'Patrocinadores',
+    sponsors: allDiamanteSponsors.slice(i * 4, i * 4 + 4)
+}));
 
 // Apoio Institucional
 const institutionalSupport = [
@@ -80,7 +60,7 @@ export default function Partners() {
 
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % sliderTiers.length);
-        }, 5000);
+        }, 3000); // <-- Tempo de rotação automática alterado para 3 segundos (3000ms)
         return () => clearInterval(interval);
     }, [isPaused]);
 
@@ -94,10 +74,10 @@ export default function Partners() {
             clearTimeout(pauseTimeoutRef.current);
         }
 
-        // Resume auto-advance after 10 seconds
+        // Resume auto-advance after 3 seconds (3000ms)
         pauseTimeoutRef.current = setTimeout(() => {
             setIsPaused(false);
-        }, 10000);
+        }, 3000);
     };
 
     // Cleanup timeout on unmount
@@ -175,14 +155,14 @@ export default function Partners() {
                         variants={gridVariants}
                     >
                         <h3 className="text-2xl font-bold text-[#5D2126] text-center">Patrocinador Master</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto px-4 sm:px-0">
                             {masterSponsors.map((sponsor, index) => (
                                 <motion.a
                                     key={index}
                                     href={sponsor.link !== '#' ? sponsor.link : undefined}
                                     target={sponsor.link !== '#' ? "_blank" : undefined}
                                     rel={sponsor.link !== '#' ? "noopener noreferrer" : undefined}
-                                    className="bg-[#F9F4F5] rounded-lg border-2 border-[#D4B5B7] flex items-center justify-center h-72 w-full transition-all duration-300 hover:border-[#BC989A] hover:shadow-lg cursor-pointer"
+                                    className="bg-[#F9F4F5] rounded-lg border-2 border-[#D4B5B7] flex items-center justify-center h-72 w-full max-w-[500px] transition-all duration-300 hover:border-[#BC989A] hover:shadow-lg cursor-pointer"
                                     variants={logoVariants}
                                     whileHover={{ y: -5, scale: 1.03 }}
                                 >
@@ -240,23 +220,17 @@ export default function Partners() {
                         variants={gridVariants}
                     >
 
-                        <div className="flex justify-center gap-2 mb-4">
-                            {sliderTiers.map((tier, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => handleManualChange(index)}
-                                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${currentSlide === index
-                                        ? 'bg-[#5D2126] text-white'
-                                        : 'bg-[#F9F4F5] text-[#5D2126] hover:bg-[#D4B5B7]'
-                                        }`}
-                                >
-                                    {tier.name.replace('Patrocinador ', '')}
-                                </button>
-                            ))}
-                        </div>
 
 
-                        <div className="relative overflow-hidden min-h-[320px]">
+
+                        <div
+                            className="relative overflow-hidden min-h-[320px]"
+                            onMouseEnter={() => setIsPaused(true)}
+                            onMouseLeave={() => setIsPaused(false)}
+                        >
+                            <h3 className="text-2xl font-bold text-[#5D2126] text-center mb-4">
+                                {sliderTiers[0].name}
+                            </h3>
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={currentSlide}
@@ -265,11 +239,7 @@ export default function Partners() {
                                     animate="center"
                                     exit="exit"
                                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                                    className="space-y-4"
                                 >
-                                    <h3 className="text-2xl font-bold text-[#5D2126] text-center">
-                                        {sliderTiers[currentSlide].name}
-                                    </h3>
                                     <motion.div
                                         className="flex flex-wrap justify-center gap-3 sm:gap-6 max-w-5xl mx-auto px-2 sm:px-0"
                                         variants={gridVariants}
@@ -280,8 +250,7 @@ export default function Partners() {
                                                 href={sponsor.link || '#'}
                                                 target={sponsor.link ? "_blank" : undefined}
                                                 rel={sponsor.link ? "noopener noreferrer" : undefined}
-                                                className={`bg - [#F9F4F5] rounded - lg border - 2 border - [#D4B5B7] flex items - center justify - center transition - all duration - 300 hover: border - [#BC989A] hover: shadow - lg cursor - pointer w - 36 sm: w - 48 md: w - 56 ${currentSlide === 0 ? 'h-32 sm:h-48' : currentSlide === 1 ? 'h-28 sm:h-44' : 'h-24 sm:h-36'
-                                                    } `}
+                                                className="bg-white rounded-lg border border-[#D4B5B7] flex items-center justify-center transition-all duration-300 hover:border-[#BC989A] hover:shadow-md cursor-pointer w-36 sm:w-48 md:w-56 h-32 sm:h-48"
                                                 variants={logoVariants}
                                                 whileHover={{ y: -5, scale: 1.03 }}
                                             >
@@ -301,10 +270,12 @@ export default function Partners() {
 
                         <div className="flex justify-center gap-2 mt-4">
                             {sliderTiers.map((_, index) => (
-                                <div
+                                <button
                                     key={index}
-                                    className={`h - 1 rounded - full transition - all duration - 500 ${currentSlide === index ? 'w-8 bg-[#5D2126]' : 'w-2 bg-[#D4B5B7]'
-                                        } `}
+                                    onClick={() => handleManualChange(index)}
+                                    className={`h-2 rounded-full transition-all duration-500 hover:bg-[#BC989A] ${currentSlide === index ? 'w-8 bg-[#5D2126]' : 'w-2 bg-[#D4B5B7]'
+                                        }`}
+                                    aria-label={`Ir para a página ${index + 1}`}
                                 />
                             ))}
                         </div>
