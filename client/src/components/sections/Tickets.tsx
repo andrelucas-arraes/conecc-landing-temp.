@@ -96,8 +96,24 @@ const ticketBatches: TicketBatch[] = [
 ];
 
 export default function Tickets() {
-  // Como deve ficar (para abrir o 2º Lote por padrão):
-  const [expandedBatch, setExpandedBatch] = useState<number | null>(4);
+  const now = new Date();
+  // Vendas vão até às 23:59 do dia 29/03/2026
+  const salesEnded = now > new Date('2026-03-29T23:59:59-03:00');
+
+  // Abre o 4º Lote por padrão apenas se as vendas ainda não acabaram
+  const [expandedBatch, setExpandedBatch] = useState<number | null>(salesEnded ? null : 4);
+
+  const dynamicBatches = ticketBatches.map((batch) => {
+    if (batch.name === '4º LOTE' && salesEnded) {
+      return {
+        ...batch,
+        highlighted: false,
+        soldOut: true,
+        categories: batch.categories.map((cat) => ({ ...cat, price: 'ESGOTADO' })),
+      };
+    }
+    return batch;
+  });
 
   const headerVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -144,7 +160,7 @@ export default function Tickets() {
 
         {/* Batches Accordion */}
         <div className="max-w-4xl mx-auto space-y-4">
-          {ticketBatches.map((batch, index) => {
+          {dynamicBatches.map((batch, index) => {
             // Lógica Central: Se estiver esgotado OU desabilitado, está "trancado"
             const isLocked = batch.soldOut || batch.disabled;
 

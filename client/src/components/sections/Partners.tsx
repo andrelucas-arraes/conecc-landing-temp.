@@ -27,13 +27,13 @@ const allDiamanteSponsors = [
     { name: 'Fotos Produções', logo: 'https://i.ibb.co/7dWFx3yM/COTA-ESSENCIAL.jpg', link: 'https://www.instagram.com/fotosproducoes' },
     { name: 'Espaçolaser', logo: 'https://i.ibb.co/ZRtXWBGK/COTA-ESSENCIAL-1.jpg', link: 'https://www.instagram.com/espacolaser.teresina' },
     { name: 'SOMERION', logo: 'https://i.ibb.co/gZTbRSwx/COTA-PRATA-1.png', link: 'https://www.instagram.com/graficamedicabrasil' },
-    { name: 'instituto cafeína', logo: 'https://i.ibb.co/cqW44pb/COTA-PRATA-2.png', link: '#' },
-    { name: 'SALVE VIDAS', logo: 'https://i.ibb.co/nM4Mmph7/COTA-PRATA-3.png', link: '#' },
-    { name: 'EFIRA', logo: 'https://i.ibb.co/XrS3zFTS/COTA-PRATA-4.png', link: '#' },
-    { name: 'wemeds', logo: 'https://i.ibb.co/d4pyxYFw/COTA-PRATA-5.png', link: '#' },
-    { name: 'IBBIO', logo: 'https://i.ibb.co/TMWkHP5f/COTA-PRATA-6.png', link: '#' },
-    { name: 'DOCTOR STORE', logo: 'https://i.ibb.co/Q3XdMQsv/COTA-PRATA-7.png', link: '#' },
-    { name: 'UNIFAESF CENTRO UNIVERSITÁRIO', logo: 'https://i.ibb.co/5x8ZzNpy/COTA-PRATA.png', link: '#' },
+    { name: 'instituto cafeína', logo: 'https://i.ibb.co/cqW44pb/COTA-PRATA-2.png', link: 'https://www.instagram.com/institutocafeina?igsh=bnhybHV1MXEzbXVu' },
+    { name: 'SALVE VIDAS', logo: 'https://i.ibb.co/nM4Mmph7/COTA-PRATA-3.png', link: 'https://www.instagram.com/salvevidaspcr?igsh=MW12bWV4eG1ndHA5ag==' },
+    { name: 'EFIRA', logo: 'https://i.ibb.co/XrS3zFTS/COTA-PRATA-4.png', link: 'https://www.instagram.com/clinicaefira?igsh=NHNpaDExdGZhaDRx' },
+    { name: 'wemeds', logo: 'https://i.ibb.co/d4pyxYFw/COTA-PRATA-5.png', link: 'https://www.instagram.com/wemeds.app?igsh=d280N2s0NHk1bDRk' },
+    { name: 'IBBIO', logo: 'https://i.ibb.co/TMWkHP5f/COTA-PRATA-6.png', link: 'https://www.instagram.com/ibbioeducacao?igsh=MThvdGFtNjhrYW04bA==' },
+    { name: 'DOCTOR STORE', logo: 'https://i.ibb.co/Q3XdMQsv/COTA-PRATA-7.png', link: 'https://www.instagram.com/doctorstorethe?igsh=MTJ4bXRzbGNleHgxZw==' },
+    { name: 'UNIFAESF CENTRO UNIVERSITÁRIO', logo: 'https://i.ibb.co/5x8ZzNpy/COTA-PRATA.png', link: 'https://www.instagram.com/unifaesf_?igsh=bzl0MXk1c2x2em8=' },
 ];
 
 const sliderTiers = Array.from({ length: Math.ceil(allDiamanteSponsors.length / 4) }, (_, i) => ({
